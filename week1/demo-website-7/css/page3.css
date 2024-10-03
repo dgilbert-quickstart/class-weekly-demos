@@ -1,0 +1,16 @@
+/*
+css/page3.css
+*/
+h1 {
+    border: 1px solid blue
+}
+
+div.div-scroll-1
+{
+    width: 300px; 
+    height: 150px;
+    white-space:wrap;
+    overflow-x:scroll;
+    border: 1px solid blue
+}
+

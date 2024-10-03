@@ -1,0 +1,54 @@
+/*
+css/page4.css
+*/
+h1 {
+    border: 1px solid blue
+}
+
+div.div-scroll-1
+{
+    width: 300px; 
+    height: 150px;
+    white-space:wrap;
+    overflow-x:scroll;
+    border: 1px solid blue
+}
+
+/*
+center page example - 1
+
+.center-page = container style - top r containing element 
+or 
+.contaner 
+
+*/
+.center-page-1
+{
+  max-width: 500px;
+  margin: auto;
+}
+
+/*
+center page example - 2
+
+.center-page = container style - top r containing element 
+or 
+.contaner 
+
+all elements has a display
+display: 
+- none - not visible 
+- in-line - horizaltally 
+- block - vertically 
+- flex - or flexably or horizaltlly 
+- other 
+
+*/
+.center-page-2
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

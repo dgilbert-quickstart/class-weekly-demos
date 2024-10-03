@@ -1,0 +1,22 @@
+/*
+css/form2.css
+*/
+h1 {
+    border: 1px solid blue
+}
+
+/*
+table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+*/
+
+.container
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

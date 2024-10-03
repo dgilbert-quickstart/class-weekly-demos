@@ -1,0 +1,154 @@
+<!-- page2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page2</title>
+    <style>
+        /*
+         -document level css 
+         -css comment 
+         -1. selecting element span 
+            - named selectors
+         -2. apply style - name:value 
+
+         - css can cascade - bottom css can override a top/document level css
+         - add style in the header - style will apply after page is rendered
+         - css top down cascading framework - styles below override styles above
+        */
+        /*
+        
+        //--- select all elements with document 
+        * {
+        }
+
+        //-- external css document 
+
+        //-- selecting elment, within element 
+        
+        //- css cacase and override example - elemnt class, element style - ovrride class
+
+        //-- multple classes on an element ie: element class1 class2
+
+        */
+        span
+        {            
+            /*
+            background-color: rgb(209, 209, 17);
+            */
+            background-color: #f0f3c8;
+        }
+
+        /*        
+        //-- select multimple elements 
+        */
+        h1, span {
+            font-family: 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
+        }
+        
+        /*        
+        //-- select child elements within a praent element 
+        */
+        div > p {
+            background-color: #f0f3c8;
+        }
+
+        /*
+        //-- named css example 
+        */
+        .demo-style-1 
+        {
+            border:1px solid blue;
+        }
+        
+        /*
+        //-- named css example only applys to div or selected element 
+        */
+        div.demo-style-2
+        {
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+
+        <header>        
+            <nav>
+                <a href="index.html">Home</a> | 
+                <a href="page1.html">Page1</a> | 
+                <a href="page2.html">Page2</a> | 
+                <a href="page3.html">Page3</a> | 
+                <a href="page4.html">Page4 - center page</a> | 
+                <a href="page5.html">Page5 - table demo 1</a> | 
+                <a href="page6.html">Page6 - table demo 2</a> | 
+                <a href="form1.html">Demo form 1</a> | 
+                <a href="form2.html">Demo form 2</a> | 
+                <a href="#">About</a> | 
+                <a href="#">Contact Us</a> 
+            </nav>
+        </header>
+        
+        <div>
+            
+            <h1>Page2</h1>
+
+            <p></p>
+            <p><a href="index.html"><img src="image.jpg" alt="Home page "></a></p>
+            <p></p>
+
+            <!-- css text formatting -->
+             <!-- select the element(s), then apply style -->
+            <div>
+                <p>
+                    <span style="color: blue;">Lorem</span> ipsum <span style="color: #008000;"> dolor sit</span>
+                </p>
+                <p style="border: 1px solid blue;">
+                    amet consectetur adipisicing elit. 
+                </p>
+                <p class="demo-style-1">
+                    Aliquid nulla vel numquam culpa vitae, sapiente odio ducimus recusandae quasi deleniti,
+                </p>
+                <p class="demo-style-2">
+                    saepe inventore cumque veniam quae? Dolore error voluptatum consectetur voluptate.
+                </p>
+            </div>
+
+            <!-- css: set width and height of div and to wrap text to the next line -->
+            <!-- vertical scrollbars -->
+            <!-- <div style="width: 200px; height: 50px;border: 1px solid blue"> -->
+            <!-- <div style="width: 200px; height: 50%;border: 1px solid blue"> -->
+            <!-- <div style="width: 200px; height: auto;border: 1px solid blue"> -->
+
+            <div style="width: 300px; height: 150px;white-space:wrap;overflow-x:scroll;border: 1px solid blue">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Dicta itaque ipsa eligendi nam accusamus dolores facere cumque quidem beatae 
+                doloremque natus fugiat voluptatibus reprehenderit ab aperiam ipsum deserunt, pariatur 
+                quae.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Dicta itaque ipsa eligendi nam accusamus dolores facere cumque quidem beatae 
+                doloremque natus fugiat voluptatibus reprehenderit ab aperiam ipsum deserunt, pariatur 
+                quae.
+            </div>
+            <p></p>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Dicta itaque ipsa eligendi nam accusamus dolores facere cumque quidem beatae <br>
+                doloremque natus fugiat voluptatibus reprehenderit ab aperiam ipsum deserunt, pariatur <br>
+                quae.
+            </div>
+
+        </div>
+        
+        <p></p>
+
+        <footer>
+            footer @ 2024 
+        </footer>
+    
+    </main>
+
+</body>
+</html>

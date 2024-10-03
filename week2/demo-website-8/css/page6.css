@@ -1,0 +1,29 @@
+/*
+css/page6.css
+*/
+h1 {
+    border: 1px solid blue
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+div.div-scroll-1
+{
+    width: 300px; 
+    height: 150px;
+    white-space:wrap;
+    overflow-x:scroll;
+    border: 1px solid blue
+}
+
+.container
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
