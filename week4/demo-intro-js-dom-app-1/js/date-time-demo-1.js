@@ -1,11 +1,11 @@
 function page_load()
 {
-    let msg = "## date-time page load"; //date type = string 
+    let msg = "## date-time page load"; //date type = string - short term memory - stack memory 
 
     console.log(msg)
 
     //js - create snapshot of current browser/system [date] and [time]     
-    //new keyword = creates a block/reserve of object/date in memory 
+    //new keyword = creates a block/reserve of object/date in long term memory - heap memory - more memory space 
     const _datetime = new Date(); //js object data type = Date 
 
     const _lbldate = document.getElementById("lbldate");
@@ -26,4 +26,5 @@ function page_load()
 
 
 }
+
 
