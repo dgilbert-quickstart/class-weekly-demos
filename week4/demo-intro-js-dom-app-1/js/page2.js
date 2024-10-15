@@ -18,13 +18,17 @@ function demo_dom_1()
     const outputDiv = document.getElementById("output");
 
     if (outputDiv != null | outputDiv != undefined){
-        //outputDiv.innerText = "<b>div updated</b>";
-        outputDiv.innerHTML = "<b>div updated</b>";
+        outputDiv.innerText = "<b>div updated</b>";
+        //outputDiv.innerHTML = "<b>div updated</b>";
+        outputDiv.style.color = "blue"; //color:blue
+        outputDiv.classList.add("style1", "style2")
+        //outputDiv.classList.remove("style1")
     }
     else
     {
         msg = "## output div not found."
         console.log(msg);
     }
+
 }
 
