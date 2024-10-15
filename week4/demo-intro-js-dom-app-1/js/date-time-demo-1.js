@@ -24,6 +24,8 @@ function page_load()
 
     _lbldate.innerText = (_datetime.getMonth() + 1) + "/" + _datetime.getDate() + "/" + _datetime.getFullYear();  //date 
 
+    //objects ie: new Date() -- has pre-deined functions 
+    //msg.getMonth() //error - method is not associated with string variable 
 
 }
 
