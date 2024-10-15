@@ -2,6 +2,18 @@ function page_load()
 {
   const msg  = "## page2 load ..."
   console.log(msg)
+
+  const _page_title_ele = document.getElementById("page-title");
+
+  if (_page_title_ele != null | _page_title_ele != undefined){
+    _page_title_ele.style.backgroundColor = "#f5f5dc"; //background-color: ...
+  }
+  else
+  {
+      msg = "## _page_title_ele not found."
+      console.log(msg);
+  }
+
 }
 
 function demo_func1()
