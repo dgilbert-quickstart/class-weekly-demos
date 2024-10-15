@@ -17,6 +17,11 @@ function page_load()
 
     //getMonth = 0-11 
     //getDate = day
+
+    //mathematical expression - return a numeric value 
+    //- (a+b) 
+    //- ((a+b)*c)
+
     _lbldate.innerText = (_datetime.getMonth() + 1) + "/" + _datetime.getDate() + "/" + _datetime.getFullYear();  //date 
 
 
