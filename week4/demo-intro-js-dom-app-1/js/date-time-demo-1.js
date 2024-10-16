@@ -37,7 +37,8 @@ function page_load()
 
     //if (_lbltime != null | _lbltime != undefined )
     //_lbltime.innerText =  "<i>" + _datetime.getHours() + ":" + _datetime.getMinutes() + ":" + _datetime.getMilliseconds() + "</i>";
-    _lbltime.innerHTML =  "<i>" + _datetime.getHours() + ":" + _datetime.getMinutes() + ":" + _datetime.getMilliseconds() + "</i>";
+    //_lbltime.innerHTML =  "<i>" + _datetime.getHours() + ":" + _datetime.getMinutes() + ":" + _datetime.getMilliseconds() + "</i>";
+    _lbltime.innerHTML = "<i>" + _datetime.toLocaleTimeString();
     _lbltime.style.backgroundColor = "#f2f200"
 
     //Display the datatype of variable
