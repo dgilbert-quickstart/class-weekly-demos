@@ -28,7 +28,7 @@ function calc_inv_ex1()
     //mathematical expression 
     const total = (item1 + item2);
     
-    msg = "total = " + total;
+    msg = "(" + item1 + " + "  + item2 + ") = " + total;
     
     //rounding decimal point 
     
