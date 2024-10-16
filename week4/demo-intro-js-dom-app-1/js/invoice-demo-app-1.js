@@ -184,9 +184,27 @@ function calc_inv_ex5()
         total = total + items_array[i];
     }
     
-    msg = `(${items_list[0]} + ${items_list[1]} + ${items_list[2]} + ${items_list[3]} + ${items_list[4]} ) = ${total.toFixed(2)}`;
-    
-    _outputDiv.innerText = msg;
+    //msg = `(${items_list[0]} + ${items_list[1]} + ${items_list[2]} + ${items_list[3]} + ${items_list[4]} ) = ${total.toFixed(2)}`;
+
+    msg = ""; //clear previous msg variable 
+
+    //for loop (starat, stop, count)
+    for (i=0;i<items_array.length-1;i++)
+    {
+        //cbuilding string - ombining or concatinting string 
+        //previous string + current item 
+        //add html code to creata new line
+        msg = msg + `${items_array[i]} <br>`
+    }
+
+    msg = msg + `<br> total = ${total.toFixed(2)}`
+
+    //updating DOM html div element 
+
+    //refactor: updatehtml dom in code ie: document.createelement , docuemnt.appendchild 
+
+    //_outputDiv.innerText = msg;
+    _outputDiv.innerHTML = msg;
 
 }
 
