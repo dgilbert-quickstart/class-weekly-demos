@@ -149,6 +149,46 @@ function calc_inv_ex4()
 
 }
 
+function calc_inv_ex5()
+{    
+    let msg = "## calc_inv_ex5";  
+    console.log(msg)
+
+    const _outputDiv = document.getElementById("output"); 
+
+    if(_outputDiv == null | _outputDiv == undefined)
+    {
+        msg = "## output div is not found"
+        console.log(msg)
+        
+        return false;
+    }
+
+    const items_list = ["5",10.2,15.15,20.13,"25.312"]
+
+    const items_array = [5,10.2,15.15,20.13,25.312]
+    
+    //const total = (items_array[0] + items_array[1] + items_array[2] + items_array[3] + items_array[4]);
+    //const total = (parseInt(items_list[0]) + items_list[1] + items_list[2] + items_list[3] + parseFloat(items_list[4]));
+    
+    let total = 0.0;
+    
+    //for loop (starat, stop, count)
+    //for (i=0;i<items_array.length-1;i++); // error - ; end code staement - continue looping 
+    for (i=0;i<items_array.length-1;i++)
+    {
+        //optional: for items_list = cast to integer if index == 0, cast to float if index == 4
+        //index = i = 0....1....
+        //compute total - add previous total to current array index item 
+        
+        total = total + items_array[i];
+    }
+    
+    msg = `(${items_list[0]} + ${items_list[1]} + ${items_list[2]} + ${items_list[3]} + ${items_list[4]} ) = ${total.toFixed(2)}`;
+    
+    _outputDiv.innerText = msg;
+
+}
 
 
 
