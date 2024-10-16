@@ -1,3 +1,9 @@
+//-- Global memory 
+//-- memory clean when page exit or unload 
+//-- can store mrmory at page level - memory will be available until page unload 
+
+const gloabl_page_datetime = new Date(); //js object data type = Date 
+
 function page_load()
 {
     let msg = "## date-time page load"; //date type = string - short term memory - stack memory 
@@ -27,6 +33,20 @@ function page_load()
     //objects ie: new Date() -- has pre-deined functions 
     //msg.getMonth() //error - method is not associated with string variable 
 
+    const _lbltime = document.getElementById("lbltime"); //data type = object / HtmlElement
+
+    //if (_lbltime != null | _lbltime != undefined )
+    //_lbltime.innerText =  "<i>" + _datetime.getHours() + ":" + _datetime.getMinutes() + "</i>";
+    _lbltime.innerHTML =  "<i>" + _datetime.getHours() + ":" + _datetime.getMinutes() + "</i>";
+    _lbltime.style.backgroundColor = "#f2f200"
+
+    //Display the datatype of variable
+
+    console.log("## datatype msg: ", typeof(msg)) //string
+    console.log("## datatype datetime: ", typeof(_datetime)) //object / Date
+    console.log("## datatype lbltime: ", typeof(_lbltime)) //object / HtmlElement
+
 }
+//after function completes, auto clean up memory 
 
 
