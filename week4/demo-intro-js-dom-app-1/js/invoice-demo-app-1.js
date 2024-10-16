@@ -36,4 +36,36 @@ function calc_inv_ex1()
 
 }
 
+function calc_inv_ex2()
+{    
+    let msg = "## calc_inv_ex2"; //data type string 
+    console.log(msg)
+
+    const _outputDiv = document.getElementById("output"); //data type - object
+
+    if(_outputDiv == null | _outputDiv == undefined)
+    {
+        msg = "## output div is not found"
+        console.log(msg)
+        
+        //exit function, does not continue code after if statement
+        return false;
+    }
+
+    //continue code after if statment 
+    
+    const item1 = "5";   //datatype = string 
+    const item2 = 10.2; //datatype = floating point = decmal number 
+
+    //mathematical expression 
+    const total = (item1 + item2);
+    
+    msg = "(" + item1 + " + "  + item2 + ") = " + total;
+    
+    //rounding decimal point 
+    
+    _outputDiv.innerText = msg;
+
+}
+
 
