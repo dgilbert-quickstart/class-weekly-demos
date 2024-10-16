@@ -58,7 +58,13 @@ function calc_inv_ex2()
     const item2 = 10.2; //datatype = floating point = decmal number 
 
     //mathematical expression 
-    const total = (item1 + item2);
+    
+    //-- convert string to integer ie: casting datatype 
+    
+    //parseInteger("5")
+    //parseFloat("10.2")
+    
+    const total = (parseInt(item1) + item2);
     
     msg = "(" + item1 + " + "  + item2 + ") = " + total;
     
