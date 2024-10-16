@@ -107,4 +107,48 @@ function calc_inv_ex3()
 
 }
 
+function calc_inv_ex4()
+{    
+    let msg = "## calc_inv_ex4";  
+    console.log(msg)
+
+    const _outputDiv = document.getElementById("output"); 
+
+    if(_outputDiv == null | _outputDiv == undefined)
+    {
+        msg = "## output div is not found"
+        console.log(msg)
+        
+        return false;
+    }
+
+    //array/list - stroe a sequence of items in memory 
+    // - use index to access items ie: 0..1..2.. instread  variable1..variable2
+
+    //list = list of items of same datatype or different data type 
+    //ie: string, number
+    const items_list = ["5",10.2,15.15,20.13,"25.312"]
+    
+    //array = list of items of same data
+    //ie: number datatype 
+    const items_array = [5,10.2,15.15,20.13,25.312]
+    
+    //array/list index - start at 0 to 1-length 
+    //ie: 5 array/list items = index = 0-4
+
+    //const total = (parseInt(item1) + item2 + item3 + item4 + parseFloat(item5));
+    //const total = (parseInt(items_array[0]) + items_array[1] + items_array[2] + items_array[3] + parseFloat(items_array[4]));
+    const total = (parseInt(items_list[0]) + items_list[1] + items_list[2] + items_list[3] + parseFloat(items_list[4]));
+    
+    //es5+ string parsing - string template literal - back tick ``
+    //msg = `(${item1} + ${item2} + ${item3} + ${item4} + ${item5} ) = ${total.toFixed(2)}`;
+    //msg = `(${items_array[0]} + ${items_array[1]} + ${items_array[2]} + ${items_array[3]} + ${items_array[4]} ) = ${total.toFixed(2)}`;
+    msg = `(${items_list[0]} + ${items_list[1]} + ${items_list[2]} + ${items_list[3]} + ${items_list[4]} ) = ${total.toFixed(2)}`;
+    
+    _outputDiv.innerText = msg;
+
+}
+
+
+
 
