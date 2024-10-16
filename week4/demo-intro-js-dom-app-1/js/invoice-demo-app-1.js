@@ -75,3 +75,34 @@ function calc_inv_ex2()
 }
 
 
+function calc_inv_ex3()
+{    
+    let msg = "## calc_inv_ex3"; //data type string 
+    console.log(msg)
+
+    const _outputDiv = document.getElementById("output"); //data type - object
+
+    if(_outputDiv == null | _outputDiv == undefined)
+    {
+        msg = "## output div is not found"
+        console.log(msg)
+        
+        return false;
+    }
+
+    const item1 = "5";   //datatype = string 
+    const item2 = 10.2; //datatype = floating point = decmal number 
+    const item3 = 15.15; //datatype = floating point = decmal number 
+    const item4 = 20.13; //datatype = floating point = decmal number 
+    const item5 = "25.312"; //string 
+    
+    const total = (parseInt(item1) + item2 + item3 + item4 + parseFloat(item5));
+    
+    msg = "(" + item1 + " + "  + item2 +  "+" + item3 + " + " + item4 + " + " + item5  + ") = " + total;
+    
+    //rounding decimal point 
+    
+    _outputDiv.innerText = msg;
+
+}
+
