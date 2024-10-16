@@ -21,9 +21,19 @@ function calc_inv_ex1()
     }
 
     //continue code after if statment 
+    
+    const item1 = 5;   //datatype = integer - non decimal number 
+    const item2 = 10.2; //datatype = floating point = decmal number 
+
+    //mathematical expression 
+    const total = (item1 + item2);
+    
+    msg = "total = " + total;
+    
+    //rounding decimal point 
+    
     _outputDiv.innerText = msg;
 
-    
 }
 
 
