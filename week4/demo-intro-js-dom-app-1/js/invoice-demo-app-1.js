@@ -74,7 +74,6 @@ function calc_inv_ex2()
 
 }
 
-
 function calc_inv_ex3()
 {    
     let msg = "## calc_inv_ex3"; //data type string 
@@ -98,11 +97,14 @@ function calc_inv_ex3()
     
     const total = (parseInt(item1) + item2 + item3 + item4 + parseFloat(item5));
     
-    msg = "(" + item1 + " + "  + item2 +  "+" + item3 + " + " + item4 + " + " + item5  + ") = " + total;
+    //rounding decimal point = .toFixed(2)
+    //msg = "(" + item1 + " + "  + item2 +  "+" + item3 + " + " + item4 + " + " + item5  + ") = " + total.toFixed(2);
     
-    //rounding decimal point 
+    //es5+ string parsing - string template literal - back tick ``
+    msg = `(${item1} + ${item2} + ${item3} + ${item4} + ${item5} ) = ${total.toFixed(2)}`;
     
     _outputDiv.innerText = msg;
 
 }
+
 
