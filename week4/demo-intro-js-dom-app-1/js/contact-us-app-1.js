@@ -20,6 +20,12 @@ function form_submit()
 
     _outputDev.innerText = msg;
 
+    //<button onclick="return form_submit()">submit</button> &nbsp;
+
+    //-- return false - stop submit 
+    //-- do not send data to another web site e / current website is default
+    //return true = send data to another webiste / current website is default
+    return false;
 }
 
 function form_reset()
