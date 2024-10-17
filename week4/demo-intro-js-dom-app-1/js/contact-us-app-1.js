@@ -38,12 +38,25 @@ function form_submit()
     const _txtphone_ele = document.getElementById("txtphone");
     const _txtcomment_ele = document.getElementById("txtcomment");
 
+    const _txtname_error_ele = document.getElementById("txtname-error");
+    //const _txtname_error_ele = document.getElementsByClassName(".txtname-error");
+
+    //const _txtname_error_ele = document.querySelector(".txtname-error"); //# css selector, select 1st element
+    //const _txtname_error_ele = document.querySelector("#txtname-error"); //# css selector, select 1st element
+
+    //-- hide the error label by default 
+    //refactor: add code to page_load and clear link
+    _txtname_error_ele.style.display = "none";
+
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
         msg = "#1# name is required";
         console.log(msg)
 
         _outputDev.innerText = msg;
+
+        //-- displsy error label
+        _txtname_error_ele.style.display = "block";
 
         return false;
     }
@@ -53,6 +66,9 @@ function form_submit()
         console.log(msg)
 
         _outputDev.innerText = msg;
+
+        //-- displsy error label
+        _txtname_error_ele.style.display = "block";
 
         return false;   
     }
@@ -158,6 +174,6 @@ function form_reset()
     //move cussor focus to txtname 
     //- refact: add code to page_load()
     _txtname_ele.focus();
-    
+
 }
 
