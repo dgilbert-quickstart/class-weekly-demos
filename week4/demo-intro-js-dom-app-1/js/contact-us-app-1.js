@@ -56,7 +56,7 @@ function form_submit()
         _outputDev.innerText = msg;
 
         //-- displsy error label
-        _txtname_error_ele.style.display = "block";
+        _txtname_error_ele.style.display = "inline";
 
         return false;
     }
@@ -68,7 +68,7 @@ function form_submit()
         _outputDev.innerText = msg;
 
         //-- displsy error label
-        _txtname_error_ele.style.display = "block";
+        _txtname_error_ele.style.display = "inline";
 
         return false;   
     }
