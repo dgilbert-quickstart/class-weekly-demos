@@ -34,6 +34,9 @@ function form_submit()
     //-- display all fields which has error 
 
     const _txtname_ele = document.getElementById("txtname");
+    const _txtemail_ele = document.getElementById("txtemail");
+    const _txtphone_ele = document.getElementById("txtphone");
+    const _txtcomment_ele = document.getElementById("txtcomment");
 
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
@@ -44,9 +47,28 @@ function form_submit()
 
         return false;
     }
-    else if (_txtname_ele.value.length == 0)
+    else if (_txtname_ele.value.length == 0 | _txtname_ele.value == "")
     {
         msg = "#2# name is required";
+        console.log(msg)
+
+        _outputDev.innerText = msg;
+
+        return false;   
+    }
+    
+    if(_txtemail_ele == null | _txtemail_ele == undefined) {
+
+        msg = "#1# email is required";
+        console.log(msg)
+
+        _outputDev.innerText = msg;
+
+        return false;
+    }
+    else if (_txtemail_ele.value.length == 0 | _txtemail_ele.value == "")
+    {
+        msg = "#2# email is required";
         console.log(msg)
 
         _outputDev.innerText = msg;
