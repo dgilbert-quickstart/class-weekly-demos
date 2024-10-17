@@ -2,6 +2,12 @@ function page_load()
 {
     const msg = "## contact-us - page load";
     console.log(msg)
+
+    const _txtname_ele = document.getElementById("txtname");
+    //const _txtname_ele = document.querySelector(".txtname");
+    //const _txtname_ele = document.querySelector("#txtname");
+
+    _txtname_ele.focus();
 }
 
 function form_submit()
@@ -39,8 +45,10 @@ function form_submit()
     const _txtcomment_ele = document.getElementById("txtcomment");
 
     const _txtname_error_ele = document.getElementById("txtname-error");
-    //const _txtname_error_ele = document.getElementsByClassName(".txtname-error");
 
+    //-- learn more at w3schools.com 
+    //const _ele_list = document.getElementsByClassName(".txtname-error");
+    
     //const _txtname_error_ele = document.querySelector(".txtname-error"); //# css selector, select 1st element
     //const _txtname_error_ele = document.querySelector("#txtname-error"); //# css selector, select 1st element
 
@@ -145,6 +153,16 @@ function form_reset()
     const _txtemail_ele = document.getElementById("txtemail");
     const _txtphone_ele = document.getElementById("txtphone");
     const _txtcomment_ele = document.getElementById("txtcomment");
+
+    const _txtname_error_ele = document.getElementById("txtname-error");
+
+    //-- learn more at w3schools.com 
+    //const _ele_list = document.getElementsByClassName(".txtname-error");
+    
+    //const _txtname_error_ele = document.querySelector(".txtname-error"); //# css selector, select 1st element
+    //const _txtname_error_ele = document.querySelector("#txtname-error"); //# css selector, select 1st element
+
+    _txtname_error_ele.style.display = "none";
 
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
