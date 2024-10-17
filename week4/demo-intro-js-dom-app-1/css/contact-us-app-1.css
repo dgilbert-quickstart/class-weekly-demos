@@ -1,0 +1,23 @@
+/*
+
+-- select element by id 
+document.getElementById("txtname-error")
+
+#txtname-error
+{
+    display: none;
+}
+
+*/
+
+/*
+-- select element by class name 
+document.getElementByClassName(".txtname-error")
+document.querySelector(".txtname-error")
+*/
+
+.txtname-error
+{
+    display: none;    
+    color: red;
+}
