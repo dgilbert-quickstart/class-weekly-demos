@@ -25,6 +25,35 @@ function form_submit()
     //-- return false - stop submit 
     //-- do not send data to another web site e / current website is default
     //return true = send data to another webiste / current website is default
+
+    //-- form validation --- 
+    //-- name is required , must not be empty, lengeht <= 20 characters 
+    //-- email is required , must not be empty, lengeht <= 100 characters 
+    //-- comment is required , must not be empty, lengeht <= 200 characters 
+    //-- display error message next to field, highlight error field 
+    //-- display all fields which has error 
+
+    const _txtname_ele = document.getElementById("txtname");
+
+    if(_txtname_ele == null | _txtname_ele == undefined) {
+
+        msg = "#1# name is required";
+        console.log(msg)
+
+        _outputDev.innerText = msg;
+
+        return false;
+    }
+    else if (_txtname_ele.value.length == 0)
+    {
+        msg = "#2# name is required";
+        console.log(msg)
+
+        _outputDev.innerText = msg;
+
+        return false;   
+    }
+
     return false;
 }
 
