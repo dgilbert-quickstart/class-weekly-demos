@@ -76,7 +76,7 @@ function form_submit()
 
         return false;
     }
-    else if (_txtname_ele.value.length == 0 | _txtname_ele.value == "")
+    else if (_txtname_ele.value.trim().length == 0 | _txtname_ele.value == "")
     {
         msg = "#2# name is required";
         console.log(msg)
@@ -102,7 +102,7 @@ function form_submit()
 
         return false;
     }
-    else if (_txtemail_ele.value.length == 0 | _txtemail_ele.value == "")
+    else if (_txtemail_ele.value.trim().length == 0 | _txtemail_ele.value == "")
     {
         msg = "#2# email is required";
         console.log(msg)
@@ -121,7 +121,7 @@ function form_submit()
 
         return false;
     }
-    else if (_txtcomment_ele.value.length == 0 | _txtcomment_ele.value == "")
+    else if (_txtcomment_ele.value.trim().length == 0 | _txtcomment_ele.value == "")
     {
         msg = "#2# comment is required";
         console.log(msg)
