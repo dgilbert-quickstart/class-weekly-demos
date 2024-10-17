@@ -104,6 +104,19 @@ function form_submit()
     msg = `## ${_txtname_ele.value} - ${_txtemail_ele.value} - ${_txtphone_ele.value} - ${_txtcomment_ele.value}`;
     console.log(msg);
 
+    //-- clear form  field -- 
+    //- refactor: create a functioon to clear form fields ie: clear_form_fields()
+    //- refact: add code to page_load()
+
+    _txtname_ele.value = ""; 
+    _txtemail_ele.value = ""; 
+    _txtphone_ele.value = ""; 
+    _txtcomment_ele.value = ""; 
+
+    //move cussor focus to txtname 
+    //- refact: add code to page_load()
+    _txtname_ele.focus();
+
     return false;
 }
 
