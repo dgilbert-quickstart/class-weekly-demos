@@ -124,5 +124,40 @@ function form_reset()
 {
     let msg = "## contact-us - form-rest";
     console.log(msg)
+    
+    const _txtname_ele = document.getElementById("txtname");
+    const _txtemail_ele = document.getElementById("txtemail");
+    const _txtphone_ele = document.getElementById("txtphone");
+    const _txtcomment_ele = document.getElementById("txtcomment");
+
+    if(_txtname_ele == null | _txtname_ele == undefined) {
+
+        msg = "## name is null or undefined";
+        console.log(msg)
+
+        _outputDev.innerText = msg;
+
+        return false;
+    }
+
+    //if(_txtemail_ele == null | _txtemail_ele == undefined) 
+
+    //if(_txtphone_ele == null | _txtphone_ele == undefined) 
+
+    //if(_txtcomment_ele == null | _txtcomment_ele == undefined) 
+
+    //-- clear form  field -- 
+    //- refactor: create a functioon to clear form fields ie: clear_form_fields()
+    //- refact: add code to page_load()
+
+    _txtname_ele.value = ""; 
+    _txtemail_ele.value = ""; 
+    _txtphone_ele.value = ""; 
+    _txtcomment_ele.value = ""; 
+
+    //move cussor focus to txtname 
+    //- refact: add code to page_load()
+    _txtname_ele.focus();
+    
 }
 
