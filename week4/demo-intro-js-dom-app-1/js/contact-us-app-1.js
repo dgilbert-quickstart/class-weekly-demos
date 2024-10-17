@@ -56,6 +56,10 @@ function form_submit()
     //refactor: add code to page_load and clear link
     _txtname_error_ele.style.display = "none";
 
+    //add remove style
+    //_txtname_error_ele.classList.add("name-error-class-1") ;
+    //_txtname_error_ele.classList.remove("name-error-class-1") ;
+
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
         msg = "#1# name is required";
@@ -65,6 +69,10 @@ function form_submit()
 
         //-- displsy error label
         _txtname_error_ele.style.display = "inline";
+            
+        //add remove style
+        //_txtname_error_ele.classList.add("name-error-class-1") ;
+        //_txtname_error_ele.classList.remove("name-error-class-1") ;
 
         return false;
     }
@@ -77,6 +85,10 @@ function form_submit()
 
         //-- displsy error label
         _txtname_error_ele.style.display = "inline";
+            
+        //add remove style
+        //_txtname_error_ele.classList.add("name-error-class-1") ;
+        //_txtname_error_ele.classList.remove("name-error-class-1") ;
 
         return false;   
     }
