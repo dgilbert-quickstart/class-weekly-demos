@@ -76,6 +76,34 @@ function form_submit()
         return false;   
     }
 
+    if(_txtcomment_ele == null | _txtcomment_ele == undefined) {
+
+        msg = "#1# comment is required";
+        console.log(msg)
+
+        _outputDev.innerText = msg;
+
+        return false;
+    }
+    else if (_txtcomment_ele.value.length == 0 | _txtcomment_ele.value == "")
+    {
+        msg = "#2# comment is required";
+        console.log(msg)
+
+        _outputDev.innerText = msg;
+
+        return false;   
+    }
+
+    msg = "## comment sent";
+    console.log(msg)
+
+    _outputDev.innerText = msg;
+
+    //-log form data - 
+    msg = `## ${_txtname_ele.value} - ${_txtemail_ele.value} - ${_txtphone_ele.value} - ${_txtcomment_ele.value}`;
+    console.log(msg);
+
     return false;
 }
 
