@@ -139,6 +139,9 @@ function form_submit()
         //concatinate error messages ie: prev msg + current error messages
         _error_msg = _error_msg + msg + " , ";
 
+        //add items to array 
+        _error_msg_array.push(msg);
+
         //return false;
     }
     else if (_txtemail_ele.value.trim().length == 0 | _txtemail_ele.value == "")
@@ -150,6 +153,9 @@ function form_submit()
 
         //concatinate error messages ie: prev msg + current error messages
         _error_msg = _error_msg + msg + " , ";
+        
+        //add items to array 
+        _error_msg_array.push(msg);
 
         //return false;   
     }
@@ -163,7 +169,10 @@ function form_submit()
 
         //concatinate error messages ie: prev msg + current error messages
         _error_msg = _error_msg + msg + " , ";
-
+        
+        //add items to array 
+        _error_msg_array.push(msg);
+        
         //return false;
     }
     else if (_txtcomment_ele.value.trim().length == 0 | _txtcomment_ele.value == "")
@@ -176,13 +185,20 @@ function form_submit()
         //concatinate error messages ie: prev msg + current error messages
         _error_msg = _error_msg + msg + " , ";
 
+        //add items to array 
+        _error_msg_array.push(msg);
+        
         //return false;   
     }
 
     //if there are form field error - display form field errors
-    if(_error_msg.length > 0)
+    //if(_error_msg.length > 0)
+    if(_error_msg_array.length > 0)
     {
-        _outputDev.innerText = _error_msg;
+        //_outputDev.innerText = _error_msg;
+        
+        _outputDev.innerText = _error_msg_array.toString();
+
         return false; //do not send form data
     }
 
