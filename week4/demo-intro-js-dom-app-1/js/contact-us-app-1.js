@@ -199,20 +199,38 @@ function form_submit()
         //-- display array element as comma seperated string     
         //_outputDev.innerText = _error_msg_array.toString();
     
-        _outputDev.innerHTML = "<ul>";
-
         //### html string parcing -- error prome for more complex ui/ux 
         //## generating html using string 
         //## refactor - document.createelement, SPA: document.appendchild ie: angular, react, vue 
 
-        for(i=0;i<=_error_msg_array.length-1;i++)
-        {
-            //console.log(_error_msg_array[i]);
-            //_outputDev.innerHTML =  _outputDev.innerHTML + _error_msg_array[i] + "<br>";
-            _outputDev.innerHTML +=  "<li>" + _error_msg_array[i] + "</li>";
-        }
+         //###################### dynamic html documentupdate ##################################
 
-        _outputDev.innerHTML += "</ul>"
+         //dynamically building html/elements using DOM code ie: SPA: Angular, React, Vue
+         //_outputDev.innerHTML = "<ul>";
+
+         let _ul_ele = document.createElement("ul");
+        
+         //for (variable init code;stop loop condition; incrementer)         
+         for(i=0;i<=_error_msg_array.length-1;i++)
+         {
+            //_outputDev.innerHTML += "<ul>" _error_msg_array[i] + "</ul>";
+            
+            let _li_ele = document.createElement("li") //create element 
+            let _span_ele = document.createElement("span") //create element 
+
+            _span_ele.innerText = _error_msg_array[i]; //update element 
+
+            _li_ele.appendChild(_span_ele); //add/append element to html document 
+            _ul_ele.appendChild(_li_ele);  //add/append element to html document 
+         }
+
+         //_outputDev.innerHTML = "</ul>";
+
+         _outputDev.innerHTML = "";
+         _outputDev.appendChild(_ul_ele); //add/append element to html document 
+
+        //###################### dynamic html documentupdate ##################################
+        
 
         return false; //do not send form data
     }
