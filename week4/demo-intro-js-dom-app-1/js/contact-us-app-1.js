@@ -172,6 +172,10 @@ function form_reset()
     let msg = "## contact-us - form-rest";
     console.log(msg)
     
+    const _outputDev = document.getElementById("output");
+    //const _outputDev = document.querySelector(".output");
+    //const _outputDev = document.querySelector("#output");
+
     const _txtname_ele = document.getElementById("txtname");
     const _txtemail_ele = document.getElementById("txtemail");
     const _txtphone_ele = document.getElementById("txtphone");
@@ -196,6 +200,8 @@ function form_reset()
         return false;
     }
 
+    //if(_outputDiv == null | _outputDiv == undefined) 
+
     //if(_txtemail_ele == null | _txtemail_ele == undefined) 
 
     //if(_txtphone_ele == null | _txtphone_ele == undefined) 
@@ -213,6 +219,8 @@ function form_reset()
     _txtphone_ele.value = ""; 
     _txtcomment_ele.value = ""; 
 
+    _outputDev.innerText = "";
+    
     //move cussor focus to txtname 
     //- refact: add code to page_load()
     _txtname_ele.focus();
