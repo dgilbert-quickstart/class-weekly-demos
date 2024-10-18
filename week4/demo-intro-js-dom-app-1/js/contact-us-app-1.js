@@ -94,7 +94,7 @@ function form_submit()
         //update error message , add current error message to previous error message variable 
         //ie: contatinating/combining strings variables 
         _error_msg = _error_msg + msg + " , ";
-        
+
         //return false;
     }
     else if (_txtname_ele.value.trim().length == 0 | _txtname_ele.value == "")
@@ -112,8 +112,12 @@ function form_submit()
         //_txtname_error_ele.classList.remove("name-error-class-1") ;
 
         _txtname_ele.style.borderBlockColor = "red";
-
-        return false;   
+        
+        //update error message , add current error message to previous error message variable 
+        //ie: contatinating/combining strings variables 
+        _error_msg = _error_msg + msg + " , ";
+        
+        //return false;   
     }
     
     if(_txtemail_ele == null | _txtemail_ele == undefined) {
@@ -122,8 +126,11 @@ function form_submit()
         console.log(msg)
 
         _outputDev.innerText = msg;
+        
+        //concatinate error messages ie: prev msg + current error messages
+        _error_msg = _error_msg + msg + " , ";
 
-        return false;
+        //return false;
     }
     else if (_txtemail_ele.value.trim().length == 0 | _txtemail_ele.value == "")
     {
@@ -132,7 +139,10 @@ function form_submit()
 
         _outputDev.innerText = msg;
 
-        return false;   
+        //concatinate error messages ie: prev msg + current error messages
+        _error_msg = _error_msg + msg + " , ";
+        
+        //return false;   
     }
 
     if(_txtcomment_ele == null | _txtcomment_ele == undefined) {
