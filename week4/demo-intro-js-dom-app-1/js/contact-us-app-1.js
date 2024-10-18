@@ -199,13 +199,20 @@ function form_submit()
         //-- display array element as comma seperated string     
         //_outputDev.innerText = _error_msg_array.toString();
     
-        _outputDev.innerHTML = "";
-        
+        _outputDev.innerHTML = "<ul>";
+
+        //### html string parcing -- error prome for more complex ui/ux 
+        //## generating html using string 
+        //## refactor - document.createelement, SPA: document.appendchild ie: angular, react, vue 
+
         for(i=0;i<=_error_msg_array.length-1;i++)
         {
             //console.log(_error_msg_array[i]);
-            _outputDev.innerHTML =  _outputDev.innerHTML + _error_msg_array[i] + "<br>";
+            //_outputDev.innerHTML =  _outputDev.innerHTML + _error_msg_array[i] + "<br>";
+            _outputDev.innerHTML +=  "<li>" + _error_msg_array[i] + "</li>";
         }
+
+        _outputDev.innerHTML += "</ul>"
 
         return false; //do not send form data
     }
