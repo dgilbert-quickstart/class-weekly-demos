@@ -195,8 +195,8 @@ function form_submit()
     //if(_error_msg.length > 0)
     if(_error_msg_array.length > 0)
     {
-        //_outputDev.innerText = _error_msg;
-        
+        //_outputDev.innerText = _error_msg;     
+        //-- display array element --    
         _outputDev.innerText = _error_msg_array.toString();
 
         return false; //do not send form data
