@@ -72,6 +72,9 @@ function form_submit()
 
     _txtname_ele.style.borderBlockColor = "initial";
 
+    //store all error messages 
+    let _error_msg = "";
+
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
         msg = "#1# name is required";
@@ -88,7 +91,11 @@ function form_submit()
 
         _txtname_ele.style.borderBlockColor = "red";
 
-        return false;
+        //update error message , add current error message to previous error message variable 
+        //ie: contatinating/combining strings variables 
+        _error_msg = _error_msg + msg + " , ";
+        
+        //return false;
     }
     else if (_txtname_ele.value.trim().length == 0 | _txtname_ele.value == "")
     {
