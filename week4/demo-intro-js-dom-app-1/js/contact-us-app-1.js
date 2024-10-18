@@ -8,6 +8,12 @@ function page_load()
     //const _txtname_ele = document.querySelector("#txtname");
 
     _txtname_ele.focus();
+
+    /*
+    -- css to se focus on a field 
+    CSS pseudo class like .selector:focus:    
+    https://www.w3schools.com/cssref/css_ref_pseudo_classes.php
+    */
 }
 
 function form_submit()
@@ -16,6 +22,8 @@ function form_submit()
     console.log(msg)
 
     const _outputDev = document.getElementById("output");
+    //const _outputDev = document.querySelector(".output");
+    //const _outputDev = document.querySelector("#output");
 
     if(_outputDev == null | _outputDev == undefined)
     {
@@ -45,10 +53,12 @@ function form_submit()
     const _txtcomment_ele = document.getElementById("txtcomment");
 
     const _txtname_error_ele = document.getElementById("txtname-error");
+    //const _outputDev = document.querySelector(".txtname-error");
+    //const _outputDev = document.querySelector("#txtname-error");
 
     //-- learn more at w3schools.com 
     //const _ele_list = document.getElementsByClassName(".txtname-error");
-    
+
     //const _txtname_error_ele = document.querySelector(".txtname-error"); //# css selector, select 1st element
     //const _txtname_error_ele = document.querySelector("#txtname-error"); //# css selector, select 1st element
 
@@ -153,7 +163,8 @@ function form_submit()
     //- refact: add code to page_load()
     _txtname_ele.focus();
 
-    return false;
+    //return true; //send form data to server - default 
+    return false; //do not send form data to server
 }
 
 function form_reset()
@@ -174,8 +185,7 @@ function form_reset()
     //const _txtname_error_ele = document.querySelector(".txtname-error"); //# css selector, select 1st element
     //const _txtname_error_ele = document.querySelector("#txtname-error"); //# css selector, select 1st element
 
-    _txtname_error_ele.style.display = "none";
-
+    
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
         msg = "## name is null or undefined";
@@ -189,13 +199,15 @@ function form_reset()
     //if(_txtemail_ele == null | _txtemail_ele == undefined) 
 
     //if(_txtphone_ele == null | _txtphone_ele == undefined) 
-
+    
     //if(_txtcomment_ele == null | _txtcomment_ele == undefined) 
-
+    
     //-- clear form  field -- 
     //- refactor: create a functioon to clear form fields ie: clear_form_fields()
     //- refact: add code to page_load()
-
+    
+    _txtname_error_ele.style.display = "none";
+    
     _txtname_ele.value = ""; 
     _txtemail_ele.value = ""; 
     _txtphone_ele.value = ""; 
