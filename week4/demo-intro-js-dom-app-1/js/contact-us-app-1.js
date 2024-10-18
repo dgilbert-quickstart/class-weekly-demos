@@ -178,7 +178,7 @@ function form_submit()
     }
 
     //no errors, continue code here 
-    
+
     msg = "## comment sent";
     console.log(msg)
 
