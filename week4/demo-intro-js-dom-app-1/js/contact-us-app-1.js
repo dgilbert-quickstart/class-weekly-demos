@@ -75,6 +75,9 @@ function form_submit()
     //store all error messages 
     let _error_msg = "";
 
+    //let _error_msg_array = new Array(); //create empty array 
+    let _error_msg_array = []; //create empty array  
+
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
         msg = "#1# name is required";
@@ -94,6 +97,9 @@ function form_submit()
         //update error message , add current error message to previous error message variable 
         //ie: contatinating/combining strings variables 
         _error_msg = _error_msg + msg + " , ";
+        
+        //add items to array 
+        _error_msg_array.push(msg);
 
         //return false;
     }
@@ -117,6 +123,9 @@ function form_submit()
         //ie: contatinating/combining strings variables 
         _error_msg = _error_msg + msg + " , ";
         
+        //add items to array 
+        _error_msg_array.push(msg);
+
         //return false;   
     }
     
