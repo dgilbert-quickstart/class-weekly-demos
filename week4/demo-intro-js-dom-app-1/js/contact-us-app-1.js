@@ -197,7 +197,15 @@ function form_submit()
     {
         //_outputDev.innerText = _error_msg;     
         //-- display array element as comma seperated string     
-        _outputDev.innerText = _error_msg_array.toString();
+        //_outputDev.innerText = _error_msg_array.toString();
+    
+        _outputDev.innerHTML = "";
+        
+        for(i=0;i<=_error_msg_array.length-1;i++)
+        {
+            //console.log(_error_msg_array[i]);
+            _outputDev.innerHTML =  _outputDev.innerHTML + _error_msg_array[i] + "<br>";
+        }
 
         return false; //do not send form data
     }
