@@ -70,6 +70,8 @@ function form_submit()
     //_txtname_error_ele.classList.add("name-error-class-1") ;
     //_txtname_error_ele.classList.remove("name-error-class-1") ;
 
+    _txtname_ele.style.borderBlockColor = "initial";
+
     if(_txtname_ele == null | _txtname_ele == undefined) {
 
         msg = "#1# name is required";
@@ -83,6 +85,8 @@ function form_submit()
         //add remove style
         //_txtname_error_ele.classList.add("name-error-class-1") ;
         //_txtname_error_ele.classList.remove("name-error-class-1") ;
+
+        _txtname_ele.style.borderBlockColor = "red";
 
         return false;
     }
@@ -99,6 +103,8 @@ function form_submit()
         //add remove style
         //_txtname_error_ele.classList.add("name-error-class-1") ;
         //_txtname_error_ele.classList.remove("name-error-class-1") ;
+
+        _txtname_ele.style.borderBlockColor = "red";
 
         return false;   
     }
@@ -220,7 +226,7 @@ function form_reset()
     _txtcomment_ele.value = ""; 
 
     _outputDev.innerText = "";
-    
+
     //move cussor focus to txtname 
     //- refact: add code to page_load()
     _txtname_ele.focus();
