@@ -141,7 +141,7 @@ function form_submit()
 
         //concatinate error messages ie: prev msg + current error messages
         _error_msg = _error_msg + msg + " , ";
-        
+
         //return false;   
     }
 
@@ -152,7 +152,10 @@ function form_submit()
 
         _outputDev.innerText = msg;
 
-        return false;
+        //concatinate error messages ie: prev msg + current error messages
+        _error_msg = _error_msg + msg + " , ";
+
+        //return false;
     }
     else if (_txtcomment_ele.value.trim().length == 0 | _txtcomment_ele.value == "")
     {
@@ -161,7 +164,10 @@ function form_submit()
 
         _outputDev.innerText = msg;
 
-        return false;   
+        //concatinate error messages ie: prev msg + current error messages
+        _error_msg = _error_msg + msg + " , ";
+        
+        //return false;   
     }
 
     msg = "## comment sent";
