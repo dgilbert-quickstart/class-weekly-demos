@@ -166,10 +166,19 @@ function form_submit()
 
         //concatinate error messages ie: prev msg + current error messages
         _error_msg = _error_msg + msg + " , ";
-        
+
         //return false;   
     }
 
+    //if there are form field error - display form field errors
+    if(_error_msg.length > 0)
+    {
+        _outputDev.innerText = _error_msg;
+        return false; //do not send form data
+    }
+
+    //no errors, continue code here 
+    
     msg = "## comment sent";
     console.log(msg)
 
