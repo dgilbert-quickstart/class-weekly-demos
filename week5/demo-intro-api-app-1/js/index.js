@@ -18,6 +18,7 @@ function js_obj_ex1()
     const obj1 = {} //empty object data type - also a JSON object 
     //dynamic data type - composite data type - complex data types - can contain any valid datatype and collections, array/list,set,map etc
 
+    //const obj2 = {"name":"name1", "price":"1.0"} //-- can create key/value is string  --
     const obj2 = {name:"name1", price:1.0} //object data tyep - also a JSON object - key/value 
 
     //json object array/list 
@@ -33,7 +34,7 @@ function js_obj_ex1()
     const _outputDiv = document.querySelector("#output") //retrieve element by id 
     //const _outputDiv = document.querySelector(".output") //using css selector syntax
 
-    if(_outputDiv == num1 | _outputDiv == undefined){
+    if(_outputDiv == null | _outputDiv == undefined){
 
         msg = "## output dic not found"
         console.log(msg)
