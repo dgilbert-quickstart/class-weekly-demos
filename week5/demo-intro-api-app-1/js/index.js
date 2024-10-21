@@ -122,7 +122,7 @@ function js_obj_ex3()
     //addess object data 
     //_outputDiv.innerText = `num2: ${num2}, name: ${obj2.name}, price: ${obj2.price}`;
     //json object array index ie: 1 = 2nd row 
-    _outputDiv.innerText = `num2: ${num2}, name: ${obj2[1].name}, price: ${obj2[1].price}`;
+    _outputDiv.innerText = `num2: ${num2}, name: ${obj3[1].name}, price: ${obj3[1].price}`;
     
 }
 
