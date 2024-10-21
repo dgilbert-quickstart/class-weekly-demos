@@ -40,8 +40,8 @@ function js_obj_ex1()
     //display object as string 
     //convert json object to string 
     //JSON.stringify(obj2)} = convert javascript object to string 
-    //_outputDiv.innerText = `num2: ${num2}, ${obj1}`;
-    _outputDiv.innerText = `num2: ${num2}, ${JSON.stringify(obj1)}`;
+    //_outputDiv.innerText = `num2: ${num2}, ${obj2}`;
+    _outputDiv.innerText = `num2: ${num2}, ${JSON.stringify(obj2)}`;
     //_outputDiv.innerHTML = `num2: ${num2}, ${obj1}`;
 
 }
