@@ -20,6 +20,9 @@ function js_obj_ex1()
 
     const obj2 = {name:"name1", price:1.0} //object data tyep - also a JSON object - key/value 
 
+    //json object array/list 
+    const obj3 = [{name:"name1", price:1.0}] //ayyay/list of object data tyep - also a JSON object - key/value 
+
     //display object as string 
     //convert json object to string 
     //console.log(`### num2: ${num2}, obj2: ${obj2}`)
