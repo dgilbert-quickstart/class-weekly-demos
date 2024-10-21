@@ -36,7 +36,7 @@ function js_obj_ex1()
 
     if(_outputDiv == null | _outputDiv == undefined){
 
-        msg = "## output dic not found"
+        msg = "## output div not found"
         console.log(msg)
         return false;
     }
@@ -63,14 +63,14 @@ function js_obj_ex2()
     const obj2 = {name:"name1", price:1.0} //object data tyep - also a JSON object - key/value 
 
     const obj3 = [{name:"name1", price:1.0}] //ayyay/list of object data tyep - also a JSON object - key/value 
-
+    
     //const _outputDiv = document.getElementById("output")
-    const _outputDiv = document.querySelector("#output") //retrieve element by id 
-    //const _outputDiv = document.querySelector(".output") //using css selector syntax
+    //const _outputDiv = document.querySelector("#output") //retrieve element by id 
+    const _outputDiv = document.querySelector(".output") //using css selector syntax
 
     if(_outputDiv == null | _outputDiv == undefined){
 
-        msg = "## output dic not found"
+        msg = "## output div not found"
         console.log(msg)
         return false;
     }
@@ -84,5 +84,46 @@ function js_obj_ex2()
     
 }
 
+
+function js_obj_ex3()
+{
+    const msg = "## js object example 2" // string 
+    console.log(msg)
+
+    const num1 = 5      //integer - non decimal 
+    const num2 = 5.1    //float - decimal point 
+
+    const obj1 = {} //empty object data type - also a JSON object 
+    
+    const obj2 = {name:"name1", price:1.0} //object data tyep - also a JSON object - key/value 
+
+    //ayyay/list of object data tyep - also a JSON object - key/value 
+    const obj3 = 
+        [ {name:"name1", price:1.0},
+          {name:"name2", price:1.2},
+          {name:"name3", price:1.3}
+        ];
+
+    //const _outputDiv = document.getElementById("output")
+    const _outputDiv = document.querySelector("#output") //retrieve element by id 
+    //const _outputDiv = document.querySelector(".output") //using css selector syntax
+
+    if(_outputDiv == null | _outputDiv == undefined){
+
+        msg = "## output div not found"
+        console.log(msg)
+        return false;
+    }
+
+    //-- console.log json data 
+    console.log(`### num2: ${num2}, obj2: ${JSON.stringify(obj3)}`)
+
+    //_outputDiv.innerText = `num2: ${num2}, ${JSON.stringify(obj2)}`;
+    //addess object data 
+    //_outputDiv.innerText = `num2: ${num2}, name: ${obj2.name}, price: ${obj2.price}`;
+    //json object array index ie: 1 = 2nd row 
+    _outputDiv.innerText = `num2: ${num2}, name: ${obj2[1].name}, price: ${obj2[1].price}`;
+    
+}
 
 
