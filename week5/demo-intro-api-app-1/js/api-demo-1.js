@@ -64,12 +64,15 @@ const btn_ajax_xhr_ex1 = document.getElementById("btn-ajax-xhr-ex1").addEventLis
 
     outputDev.innerText = msg;
 
-    const _api_url_endpoint = "https://jsonplaceholder.org/users?id=1";
+    const _api_url_user_endpoint = "https://jsonplaceholder.org/users?id=1";
+    const _api_url_comments_endpoint = "https://jsonplaceholder.org/comments?id=1";
+    const _api_url_posts_endpoint = "https://jsonplaceholder.org/posts?id=1";
+    const _url_giphy_endpoint = "";
 
     //request data 
     //call blocks until data is abaliavele by default
     //can me call asyncrynous - non blocking 
-    xhr.open('GET', _api_url_endpoint, true);
+    xhr.open('GET', _api_url_user_endpoint, true);
     xhr.send();     
 
 });
