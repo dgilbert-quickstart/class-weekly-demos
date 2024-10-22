@@ -22,7 +22,7 @@ function page_load()
 
 //## using DOM to bind button events 
 //- js callback methods - es1-4+ - called by javscript or within code 
-//- js ananymous method  - es5+
+//- js ananymous method  - es5+ - function witout a name - call function in-place withou creating a variable 
 //- js arrow functions  - es5+
 //- promises - es5+
 //- async/await  - es5+
@@ -31,7 +31,7 @@ function page_load()
 //const btnajaxex1 = document.querySelector(",.btn-ajax-ex1")
 //const btnajaxex1 = document.querySelector("#btn-ajax-ex1")
 const btnajaxex1 = document.getElementById("btn-ajax-ex1").addEventListener("click", 
-    /*callback function*/ function(event){
+    /*callback/ananymous function*/ function(event){
 
     //-- can cancel or continue button click 
     //-- use default
