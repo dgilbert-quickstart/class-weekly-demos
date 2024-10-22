@@ -155,14 +155,14 @@ const btn_fetch_ex1 = document.getElementById("btn-fetch-ex1").addEventListener(
 
         //-- display first row of post data 
         outputDev.innerText = JSON.stringify(data[0]);
-
     })
     .catch(error => {
       console.error('T## here was a problem with the fetch operation:', error);
       outputDev.innerText = error;
     });
 
-    outputDev.innerText = "..continue fteching data...";
+    console.log("..continue fteching data...demo of non-blocking code")
+    outputDev.innerText = "..continue fteching data...demo of non-blocking code";
 
 });
 
