@@ -109,7 +109,6 @@ const btn_jquery_ex1 = document.getElementById("btn-jquery-ex1").addEventListene
         console.log("Jquery - Comments Data: " + "\nStatus: " + status)
         console.log(data);
         outputDev.innerText = JSON.stringify(data);
-
     });
 
 });
