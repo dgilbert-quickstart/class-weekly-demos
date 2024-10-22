@@ -20,8 +20,9 @@ function page_load()
 }
 
 
-
 //## using DOM to bind button events 
 //-- js callback methods
 //-- js ananymous method 
+//-- exception handling 
+
 
