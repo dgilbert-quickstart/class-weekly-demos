@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api Demo 1</title>
-    <link type="text/css" rel="stylesheet" href="css/api-demo-1.css">
+    <link type="text/css" rel="stylesheet" href="css/api-demo-1.css">    
+    <!-- js script loaded before page is displayed -->
+    <!--
     <script src="js/api-demo-1.js"></script>
+    -->
+    <!-- defer - js script loaded after page is displayed -->
+     <!--
+    <script src="js/api-demo-1.js" defer></script>
+    -->
 </head>
 <body onload="page_load()">
     <nav>
@@ -33,5 +40,7 @@
             footer @ 2024 
         </footer>
     </main>
+    <!-- js script load after page is displayed -->
+    <script src="js/api-demo-1.js"></script>
 </body>
 </html>
