@@ -5,6 +5,26 @@ const outputDev = document.getElementById("output");
 //const outputDev = document.querySelector("#output");
 //const outputDev = document.querySelector(".output");
 
+//XMLHttpRequest = xhr 
+//const xhr = new XMLHttpRequest();
+
+/*
+//defind function to retrieve data 
+/*ananymous/callback
+xhr.onreadystatechange = function () {
+
+    //## inside ananymous/callback function
+    //this = refer to current/instance ananymous/callback function in-memory ie: variable 
+
+    if (this.readyState === 4 && this.status === 200) {
+        //data is avaliable 
+        //JSON.parse - convert text json data to json object 
+        console.log(JSON.parse(xhr.responseText));
+        outputDev.innerText = xhr.responseText;
+    }
+}
+*/
+
 function page_load()
 {
     const msg = "## api demo 1 - page load"
@@ -28,10 +48,14 @@ function page_load()
 //- async/await  - es5+
 //- exception handling - es1-4+
 
+const btnajaxex1 = document.getElementById("btn-ajax-xhr-ex1");
+
+btnajaxex1.addEventListener("click",function(){
+
+})
 //const btnajaxex1 = document.querySelector(",.btn-ajax-ex1")
 //const btnajaxex1 = document.querySelector("#btn-ajax-ex1")
-const btnajaxex1 = document.getElementById("btn-ajax-ex1").addEventListener("click", 
-    /*callback/ananymous function*/ function(event){
+/*const btnajaxex1 = document.getElementById("btn-ajax-xhr-ex1").addEventListener("click", function(event){
 
     //-- can cancel or continue button click 
     //-- use default
@@ -47,7 +71,16 @@ const btnajaxex1 = document.getElementById("btn-ajax-ex1").addEventListener("cli
 
     outputDev.innerText = msg;
 
+    //const _api_url_endpoint = "https://jsonplaceholder.org/users?id=1";
+
+    //request data 
+    //call blocks until data is abaliavele by default
+    //can me call asyncrynous - non blocking 
+    //xhr.open('GET', _api_url_endpoint, true);
+    //xhr.send();     
+
 });
+*/
 
 
 
