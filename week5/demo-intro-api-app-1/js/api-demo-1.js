@@ -30,7 +30,8 @@ function page_load()
 
 //const btnajaxex1 = document.querySelector(",.btn-ajax-ex1")
 //const btnajaxex1 = document.querySelector("#btn-ajax-ex1")
-const btnajaxex1 = document.getElementById("btn-ajax-ex1").addEventListener("click", /*callback function*/ function(event){
+const btnajaxex1 = document.getElementById("btn-ajax-ex1").addEventListener("click", 
+    /*callback function*/ function(event){
 
     //-- can cancel or continue button click 
     //-- use default
