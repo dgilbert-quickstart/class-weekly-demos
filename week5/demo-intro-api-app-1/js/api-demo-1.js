@@ -142,7 +142,7 @@ const btn_fetch_ex1 = document.getElementById("btn-fetch-ex1").addEventListener(
     fetch(_api_url_posts_endpoint)
     .then(response => {
       if (!response.ok) {
-        //throw - generate or a error and descrption 
+        //throw/raise - generate or a error and descrption 
         throw new Error('Network response was not ok');
       }
       //-- convert data from text to json 
