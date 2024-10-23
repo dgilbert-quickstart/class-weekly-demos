@@ -82,12 +82,12 @@ document.getElementById("btn-giphy-api-ex1").addEventListener("click",async =>{
             console.log("#### fetch giphy data result ###")
             console.log(data);
 
-            outputDev.innerText = "## fetch giphy data result ##";
+            outputDiv.innerText = "## fetch giphy data result ##";
 
         })
         .catch(error => {
             console.error('T## here was a problem with the fetch operation:', error);
-            outputDev.innerText = error;
+            outputDiv.innerText = error;
         });
 
     } catch (error) {
