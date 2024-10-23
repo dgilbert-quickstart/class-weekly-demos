@@ -150,7 +150,7 @@ const btn_fetch_ex1 = document.getElementById("btn-fetch-ex1").addEventListener(
     })
     .then(data => {
 
-        console.log("#### post data ###")
+        console.log("#### fetch.promise then - post data ###")
         console.log(data);
 
         //-- display first row of post data 
@@ -169,9 +169,10 @@ const btn_fetch_ex1 = document.getElementById("btn-fetch-ex1").addEventListener(
 
 //const btn_fetch_async_await_ex1 = document.querySelector(".btn-fetch-async-await-ex1")
 //const btn_fetch_async_await_ex1 = document.querySelector("#btn-fetch-async-await-ex1")
-//const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",function(event){
-//const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",(event)=>{
-const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",event=>{
+//const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",async function(event){
+//const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",async (event)=>{  
+const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1")
+.addEventListener("click",async event=>{
 
     event.preventDefault();
 
@@ -184,6 +185,29 @@ const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await
     const msg = "## btn_fetch_async_await_ex1";
 
     outputDev.innerText = msg;
+
+    
+    const _api_url_user_endpoint = "https://jsonplaceholder.org/users?id=1";
+    const _api_url_comments_endpoint = "https://jsonplaceholder.org/comments?id=1";
+    const _api_url_posts_endpoint = "https://jsonplaceholder.org/posts?id=1";
+    const _url_giphy_endpoint = "";
+    const _url_data_file_enpoint = "./data/demo1.json";
+
+    //'await' expressions are only allowed within async functions and at the top levels of modules.ts(1308)
+    //
+    //## must add await keyword to function which call await code  
+    //
+    //EXAMPLE: async event=>{
+    //
+    //wait code = wait until data is avaliable ie: blocks 
+    const response = await fetch(_api_url_posts_endpoint);
+    const data = await response.json();
+    
+    console.log("#### async/await - post data ###")
+    console.log(data);
+
+    //-- display first row of post data 
+    outputDev.innerText = JSON.stringify(data[0]);
 
 });
 
