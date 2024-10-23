@@ -13,7 +13,7 @@ async function page_load()
         console.log(msg) 
         return false;
     }
-
+ 
     outputDiv.innerText = msg;
 }
 
