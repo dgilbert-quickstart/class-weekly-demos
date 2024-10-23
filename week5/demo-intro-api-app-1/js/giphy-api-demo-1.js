@@ -81,6 +81,7 @@ document.getElementById("btn-giphy-api-ex1").addEventListener("click",async =>{
             console.log("#### fetch giphy data result ###")
             console.log(data);
 
+            //## data.images.original.url 
             outputDiv.innerText = "## fetch giphy data result ##";
 
         })
