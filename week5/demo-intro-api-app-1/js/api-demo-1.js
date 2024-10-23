@@ -167,6 +167,25 @@ const btn_fetch_ex1 = document.getElementById("btn-fetch-ex1").addEventListener(
 });
 
 
+//const btn_fetch_async_await_ex1 = document.querySelector(".btn-fetch-async-await-ex1")
+//const btn_fetch_async_await_ex1 = document.querySelector("#btn-fetch-async-await-ex1")
+//const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",function(event){
+//const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",(event)=>{
+const btn_fetch_async_await_ex1 = document.getElementById("btn-fetch-async-await-ex1").addEventListener("click",event=>{
+
+    event.preventDefault();
+
+    if(outputDev == null | outputDev == undefined){       
+        const msg = "## api demo 1 - output div not found"
+        console.log(msg) 
+        return false;
+    }
+
+    const msg = "## btn_fetch_async_await_ex1";
+
+    outputDev.innerText = msg;
+
+});
 
 
 
