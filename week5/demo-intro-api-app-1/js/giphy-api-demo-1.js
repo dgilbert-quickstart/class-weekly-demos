@@ -77,7 +77,7 @@ document.getElementById("btn-giphy-api-ex1").addEventListener("click",async =>{
             //-- convert data from text to json 
             return response.json();
         })
-        .then(data => {
+        .then(data => { 
 
             console.log("#### fetch giphy data result ###")
             console.log(data);
