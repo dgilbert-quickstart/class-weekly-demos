@@ -69,7 +69,7 @@ document.getElementById("btn-giphy-api-ex1").addEventListener("click",async =>{
             
         fetch(_giphy_url_1)
         //fetch(_url_giphy_demo_data_url)
-        .then(response => {
+        .then(response => { 
             if (!response.ok) {
                 //throw/raise - generate or a error and descrption 
                 throw new Error('Network response was not ok');
