@@ -67,8 +67,8 @@ document.getElementById("btn-giphy-api-ex1").addEventListener("click",async =>{
 
         //## can add other parameters ie: search limit, etc..
             
-        //fetch(_giphy_url_1)
-        fetch(_url_giphy_demo_data_url)
+        fetch(_giphy_url_1)
+        //fetch(_url_giphy_demo_data_url)
         .then(response => {
             if (!response.ok) {
                 //throw/raise - generate or a error and descrption 
