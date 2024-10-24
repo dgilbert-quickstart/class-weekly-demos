@@ -156,7 +156,7 @@ document.getElementById("btn-search").addEventListener("click",async =>{
             //## data[index ie: 0].images.original.url 
             //## data[0].images.original.url 
             
-            if(results.data.length>0){
+            if(results.data.length>0){ 
                 
                 //const _img_url = results.data[0].images.original.url;
                 //console.log(`#> results.data[0].images.original.url: ${_img_url}`)
