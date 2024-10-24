@@ -100,11 +100,31 @@ document.getElementById("btn-giphy-api-ex1").addEventListener("click",async =>{
 document.getElementById("btn-search").addEventListener("click",async =>{
     
     let msg = "";
-
+    
     try {
         
         msg = "## btn-search ";
         outputDiv.innerText = msg;
+
+        const _txtsearch = document.getElementById("txtsearch");
+
+        if(_txtsearch == null | _txtsearch == undefined)
+        {                
+            msg = "## please enter a search text";
+            outputDiv.innerText = msg;
+            return false;
+        }
+        else if (_txtsearch.value.trim().length == 0)
+        {                
+            msg = "## please enter a search text";
+            outputDiv.innerText = msg;
+            return false;
+        }
+
+        msg = `* searching for: ${_txtsearch.value}`
+        outputDiv.innerText = msg;
+
+
 
     } catch (error) {
         
