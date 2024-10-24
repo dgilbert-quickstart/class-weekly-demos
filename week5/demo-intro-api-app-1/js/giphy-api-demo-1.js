@@ -165,7 +165,7 @@ document.getElementById("btn-search").addEventListener("click",async =>{
 
                 let _html = "<div>"
 
-                //results.data.forEach(item => 
+                /*
                 for(i=0;i<results.data.length-1;i++){
 
                     const _img_url = results.data[i].images.original.url;
@@ -175,7 +175,24 @@ document.getElementById("btn-search").addEventListener("click",async =>{
                     //exit loop when > 5 items 
                     //1 line if statemant 
                     if(i>=5) break;
-                }
+                }*/
+                
+                //## forEaach - es5+ -- loop through all item 
+                results.data.forEach((item, index) => {
+
+                    if(index <= 5){
+                        
+                        //const _img_url = results.data[i].images.original.url;
+                        const _img_url = item.images.original.url;
+
+                        _html += `<img width='300' height='200' src='${_img_url}'>`
+                        
+                    }
+
+                    //exit loop when > 5 items 
+                    //1 line if statemant 
+                    //if(index>=5) break; //error in forEach 
+                });
 
                 _html += "<div>"
 
