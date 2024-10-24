@@ -150,8 +150,11 @@ document.getElementById("btn-search").addEventListener("click",async =>{
             console.log("#### fetch giphy data result ###")
             console.log(data);
 
-            //## data.images.original.url 
             outputDiv.innerText = "## fetch giphy data result ##";
+
+            //giphy search result json image field path, display in web page 
+            //## data[index ie: 0].images.original.url 
+            //## data[0].images.original.url 
 
         })
         .catch(error => {
