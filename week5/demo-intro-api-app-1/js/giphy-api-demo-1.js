@@ -145,17 +145,24 @@ document.getElementById("btn-search").addEventListener("click",async =>{
             //-- convert data from text to json 
             return response.json();
         })
-        .then(data => { 
+        .then(results => { 
 
             console.log("#### fetch giphy data result ###")
-            console.log(data);
+            console.log(results);
 
             outputDiv.innerText = "## fetch giphy data result ##";
 
             //giphy search result json image field path, display in web page 
             //## data[index ie: 0].images.original.url 
             //## data[0].images.original.url 
-
+            
+            if(results.data.length>0){
+                const _img_url = results.data[0].images.original.url;
+                console.log(`#> results.data[0].images.original.url: ${_img_url}`)
+                //display image 
+                outputDiv.innerHTML = `<img width='300' height='200' src='${_img_url}'>`
+            }
+  
         })
         .catch(error => {
             console.error('T## here was a problem with the fetch operation:', error);
