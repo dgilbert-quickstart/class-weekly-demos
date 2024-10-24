@@ -97,5 +97,24 @@ document.getElementById("btn-giphy-api-ex1").addEventListener("click",async =>{
 
 })
 
+document.getElementById("btn-search").addEventListener("click",async =>{
+    
+    let msg = "";
+
+    try {
+        
+        msg = "## btn-search ";
+        outputDiv.innerText = msg;
+
+    } catch (error) {
+        
+        console.log("## btn-search - error ")
+        console.log(error)
+
+        msg = "## btn-search - error ";
+        outputDiv.innerText = msg;
+    }
+
+})
 
 
