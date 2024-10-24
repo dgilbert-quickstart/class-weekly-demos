@@ -157,10 +157,29 @@ document.getElementById("btn-search").addEventListener("click",async =>{
             //## data[0].images.original.url 
             
             if(results.data.length>0){
-                const _img_url = results.data[0].images.original.url;
-                console.log(`#> results.data[0].images.original.url: ${_img_url}`)
+                
+                //const _img_url = results.data[0].images.original.url;
+                //console.log(`#> results.data[0].images.original.url: ${_img_url}`)
                 //display image 
-                outputDiv.innerHTML = `<img width='300' height='200' src='${_img_url}'>`
+                //outputDiv.innerHTML = `<img width='300' height='200' src='${_img_url}'>`
+
+                let _html = "<div>"
+
+                //results.data.forEach(item => 
+                for(i=0;i<results.data.length-1;i++){
+
+                    const _img_url = results.data[i].images.original.url;
+
+                    _html += `<img width='300' height='200' src='${_img_url}'>`
+
+                    //exit loop when > 5 items 
+                    //1 line if statemant 
+                    if(i>=5) break;
+                }
+
+                _html += "<div>"
+
+                outputDiv.innerHTML = _html;
             }
   
         })
