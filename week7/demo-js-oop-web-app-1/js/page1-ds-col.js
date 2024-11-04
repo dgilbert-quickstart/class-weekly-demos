@@ -163,11 +163,19 @@ document.getElementById("btn-ds-coll-loop-ex3").addEventListener("click", (event
         msg = `### map loop ##  <p>`
         msg += `${items_list_1.toString()} <p>`
 
-        items_list_1.map((item,index,original_array)=>{
+        //foreach = loop through al items in the array 
+        //map = returns a resulting array of all items in loop 
+        // - used often in react and other single page development 
+
+        const _result = items_list_1.map((item,index,original_array)=>{
             msg += `index: ${index} - ${item} <br>`        
         })
 
+        msg += `<p>result: ${_result.toString()} `
+
         outputDiv.innerHTML = msg;
+
+
 
     } catch (error) {
 
