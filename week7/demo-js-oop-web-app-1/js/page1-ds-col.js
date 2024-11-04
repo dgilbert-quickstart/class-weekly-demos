@@ -54,3 +54,45 @@ document.getElementById("btn-ds-coll-ex1").addEventListener("click", (event)=>{
     }
 });
 
+
+document.getElementById("btn-ds-coll-loop-ex1").addEventListener("click", (event)=>{
+
+    let msg = "";
+    
+    //define/creating array/collection 
+    //-1 array, object , mixed/nested -array & object
+    //-2 looping throught 
+    //-3 filtering, finding 
+    //-4 add, update, delete
+    //- array index - 0..1, array/collection length
+
+    //- integer array - data in-memory 
+    const items_list_1 = [1,2,3,4,5,6];
+
+    try {
+        
+        msg =  "# btn-ds-coll-loop-ex1"
+        outputDiv.innerText = msg
+        console.log(msg)
+
+        //msg = `${JSON.stringify(items_list_1)} <p>`
+        msg = `${items_list_1.toString()} <p>`
+
+        for(i=0;i<items_list_1.length;i++){
+            msg += `index: ${i} - ${items_list_1[i]} <br>`
+        }
+
+        outputDiv.innerHTML = msg;
+
+    } catch (error) {
+
+        msg =  "# btn-ds-coll-loop-ex1: error"
+        outputDiv.innerText = msg
+
+        console.log(msg)
+        console.log(error)
+    }
+});
+
+
+
