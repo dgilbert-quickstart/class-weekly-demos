@@ -139,3 +139,43 @@ document.getElementById("btn-ds-coll-loop-ex2").addEventListener("click", (event
 
 
 
+document.getElementById("btn-ds-coll-loop-ex3").addEventListener("click", (event)=>{
+
+    let msg = "";
+    
+    //define/creating array/collection 
+    //-1 array, object , mixed/nested -array & object
+    //-2 looping throught 
+    //-3 filtering, finding 
+    //-4 add, update, delete
+    //- array index - 0..1, array/collection length
+
+    //- integer array - data in-memory 
+    const items_list_1 = [1,2,3,4,5,6];
+
+    try {
+        
+        msg =  "# btn-ds-coll-loop-ex3"
+        outputDiv.innerText = msg
+        console.log(msg)
+
+        //msg = `${JSON.stringify(items_list_1)} <p>`
+        msg = `### map loop ##  <p>`
+        msg += `${items_list_1.toString()} <p>`
+
+        items_list_1.map((item,index,original_array)=>{
+            msg += `index: ${index} - ${item} <br>`        
+        })
+
+        outputDiv.innerHTML = msg;
+
+    } catch (error) {
+
+        msg =  "# btn-ds-coll-loop-ex3: error"
+        outputDiv.innerText = msg
+
+        console.log(msg)
+        console.log(error)
+    }
+});
+
