@@ -202,6 +202,7 @@ document.getElementById("btn-ds-coll-crud-ex1").addEventListener("click", (event
 
     //- integer array - data in-memory 
     const items_list_1 = [1,2,3,4,5,6];
+    const array_string = items_list_1.toString();
 
     try {
         
@@ -214,9 +215,17 @@ document.getElementById("btn-ds-coll-crud-ex1").addEventListener("click", (event
 
         //update item 
         items_list_1[2] = items_list_1[2]*2
-        
-        //loop 
-        msg = `## ${items_list_1.toString()} <p>`
+
+        //delete from bttom/last of array 
+        //items_list_1.pop()
+
+        msg += `## delete index 4 <br>`
+        //-or- delete         
+        items_list_1.splice(4,1) //index, number of items to remove 
+
+        //
+        msg += `## original array: ${array_string} <p>`
+        msg += `## ${items_list_1.toString()} <p>`
 
         items_list_1.map(item=>{
             msg += `${item} <br>`
