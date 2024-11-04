@@ -33,6 +33,9 @@ document.getElementById("btn-ds-coll-ex1").addEventListener("click", (event)=>{
         msg += `array index 0: ${items_list_1[0]} <p>`
         
         // access array by index 
+        msg += `array index 3: ${items_list_1[3]} <p>`
+        
+        // access array by index 
         msg += `array index 5: ${items_list_1[5]} <p>`
         
         //error - index 6 = out of bound or out of array length 
