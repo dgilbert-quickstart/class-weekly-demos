@@ -61,20 +61,24 @@ document.getElementById("btn-ds-coll-filter-ex2").addEventListener("click", (eve
         const _search1 = 5;
         const _search2 = 10;
 
+        let _found_index1 = -1;
+        let _found_index2 = -1;
+
         //-- finds first item matching the if statement 
 
         const _found1 = items_list_1.find((item,index)=>{
-            //index
+            _found_index1 = index
             return item == _search1
         });
 
         const _found2 = items_list_1.find((item,index)=>{
-            //index
+            _found_index2 = index
             return item == _search2
         });
 
         msg = `${items_list_1.toString()} <p>`
-        msg += `search1: ${_search1} found1: ${_found1} - search2: ${_search2} found2: ${_found2}`
+        msg += `search1: ${_search1}, found1: ${_found1}, index: ${_found_index1} 
+        | search2: ${_search2}, found2: ${_found2}, index: ${_found_index2}`
 
         outputDiv.innerHTML = msg;
 
