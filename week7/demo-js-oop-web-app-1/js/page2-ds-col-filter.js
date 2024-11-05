@@ -11,7 +11,7 @@ document.getElementById("btn-ds-coll-filter-ex1").addEventListener("click", (eve
     //-3 filtering, finding 
 
     //- integer array - data in-memory 
-    const items_list_1 = [1,2,3,4,5,6];
+    const items_list_1 = [1,2,3,4,3,5,6,7,5];
 
     try {
         
@@ -19,6 +19,8 @@ document.getElementById("btn-ds-coll-filter-ex1").addEventListener("click", (eve
         outputDiv.innerText = msg
         console.log(msg)
 
+        //const _index_item_10 = items_list_1.lastIndexOf(3) //last index found 
+        
         const _index_item_3 = items_list_1.indexOf(3)
         const _index_item_10 = items_list_1.indexOf(10)
 
