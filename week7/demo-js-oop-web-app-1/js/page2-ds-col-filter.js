@@ -64,6 +64,10 @@ document.getElementById("btn-ds-coll-filter-ex2").addEventListener("click", (eve
         let _found_index1 = -1;
         let _found_index2 = -1;
 
+        //items_list_1.findIndex()
+        //items_list_1.findLast()
+        //items_list_1.findLastIndex()
+
         //-- finds first item matching the if statement 
 
         const _found1 = items_list_1.find((item,index)=>{
