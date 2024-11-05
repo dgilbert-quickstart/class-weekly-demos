@@ -16,6 +16,23 @@ document.getElementById("btn-array-include-ex1").addEventListener("click", (even
         outputDiv.innerText = msg
         console.log(msg)
 
+        msg = `${items_list_1.toString()} <p>`
+
+        //items_list_1.some()
+        //items_list_1.every() 
+        //items_list_1.at() //ie: find
+        //items_list_1.sort()
+
+        //-- if item exists or conains in array 
+        if (items_list_1.includes(4))
+        {
+            msg += `## item 4 exist in array `;
+        }
+        else
+        {
+            msg += `## item 4 not found in array `;
+        }
+
         outputDiv.innerHTML = msg;
 
 
