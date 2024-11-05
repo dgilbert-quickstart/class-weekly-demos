@@ -98,8 +98,6 @@ document.getElementById("btn-ds-coll-filter-ex2").addEventListener("click", (eve
 });
 
 
-
-
 document.getElementById("btn-ds-coll-filter-ex3").addEventListener("click", (event)=>{
 
     let msg = "";
@@ -137,6 +135,46 @@ document.getElementById("btn-ds-coll-filter-ex3").addEventListener("click", (eve
     } catch (error) {
 
         msg =  "# btn-ds-coll-filter-ex3: error"
+        outputDiv.innerText = msg
+
+        console.log(msg)
+        console.log(error)
+    }
+});
+
+
+document.getElementById("btn-ds-coll-filter-ex4").addEventListener("click", (event)=>{
+
+    let msg = "";
+    
+    //define/creating array/collection 
+    //-3 filtering, finding, reduce 
+
+    //- integer array - data in-memory 
+    const items_list_1 = [1,2,3,4,3,5,6,7,5];
+
+    try {
+        
+        msg =  "# btn-ds-coll-filter-ex4"
+        outputDiv.innerText = msg
+        console.log(msg)
+
+        const _initValue = 0;
+        
+        //reduce - loop throu all items and return 1 value 
+        //ie: comute all value
+        const _total = items_list_1.reduce((prevValue, curValue,index)=>{
+            return prevValue += curValue
+        },_initValue)
+
+        msg = `${items_list_1.toString()}<p>`
+        msg += `total : ${_total}`;
+
+        outputDiv.innerHTML = msg;
+
+    } catch (error) {
+
+        msg =  "# btn-ds-coll-filter-ex4: error"
         outputDiv.innerText = msg
 
         console.log(msg)
