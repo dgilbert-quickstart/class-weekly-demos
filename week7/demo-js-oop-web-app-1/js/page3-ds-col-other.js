@@ -52,14 +52,24 @@ document.getElementById("btn-nested-array-functions-ex1").addEventListener("clic
 
     let msg = "";
     
-    //- integer array - data in-memory 
-    const items_list_1 = [1,2,3,4,3,5,6,7,5];
+    //- data in-memory 
+    const items1 = "item1,item2,item3,item4"
+    const items2 = "item1:1.0,item2:1.3,item3:1.1,item4:1.2"
 
     try {
         
         msg =  "# btn-nested-array-functions-ex1"
         outputDiv.innerText = msg
         console.log(msg)
+
+        const _list = items1.split(",")
+
+        msg = `${items1} <p>`
+        msg += `${_list.toString()} <p>`
+
+        _list.forEach((item,index)=>{
+            msg += `${item} <br>`
+        })
 
         outputDiv.innerHTML = msg;
 
@@ -74,5 +84,38 @@ document.getElementById("btn-nested-array-functions-ex1").addEventListener("clic
     }
 });
 
+document.getElementById("btn-nested-array-functions-ex2").addEventListener("click", (event)=>{
+
+    let msg = "";
+    
+    //- data in-memory 
+    const items1 = "item1,item2,item3,item4"
+    const items2 = "item1:1.0,item2:1.3,item3:1.1,item4:1.2"
+
+    try {
+        
+        msg =  "# btn-nested-array-functions-ex2"
+        outputDiv.innerText = msg
+        console.log(msg)
+
+        msg = `${items1} <p>`
+
+        //ie: funcional programming , nested functions, function chaining
+        items1.split(",").forEach((item,index)=>{
+            msg += `${item} <br>`
+        })//.map().filter(),...etc...
+
+        outputDiv.innerHTML = msg;
+
+
+    } catch (error) {
+
+        msg =  "# btn-nested-array-functions-ex2: error"
+        outputDiv.innerText = msg
+
+        console.log(msg)
+        console.log(error)
+    }
+});
 
 
