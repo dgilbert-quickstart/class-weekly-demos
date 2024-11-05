@@ -98,3 +98,46 @@ document.getElementById("btn-ds-coll-filter-ex2").addEventListener("click", (eve
 });
 
 
+
+
+document.getElementById("btn-ds-coll-filter-ex3").addEventListener("click", (event)=>{
+
+    let msg = "";
+    
+    //define/creating array/collection 
+    //-3 filtering, finding 
+
+    //- integer array - data in-memory 
+    const items_list_1 = [1,2,3,4,3,5,6,7,5];
+
+    try {
+        
+        msg =  "# btn-ds-coll-filter-ex3"
+        outputDiv.innerText = msg
+        console.log(msg)
+
+        //const _search1 = 10
+        const _search1 = 3
+
+        const _found_items = items_list_1.filter((item,index)=>{
+
+            //index found 
+            return item == _search1
+        })
+
+        msg = `${items_list_1.toString()} <p>`
+        msg += `${_found_items.toString()}`
+
+        outputDiv.innerHTML = msg;
+
+    } catch (error) {
+
+        msg =  "# btn-ds-coll-filter-ex3: error"
+        outputDiv.innerText = msg
+
+        console.log(msg)
+        console.log(error)
+    }
+});
+
+
