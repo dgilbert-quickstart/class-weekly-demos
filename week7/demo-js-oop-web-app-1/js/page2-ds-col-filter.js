@@ -118,15 +118,19 @@ document.getElementById("btn-ds-coll-filter-ex3").addEventListener("click", (eve
 
         //const _search1 = 10
         const _search1 = 3
-
+        let _found_indexes = []
         const _found_items = items_list_1.filter((item,index)=>{
-
             //index found 
-            return item == _search1
+             if(item == _search1)
+             {
+                _found_indexes.push(index)
+                return true
+             }
         })
 
         msg = `${items_list_1.toString()} <p>`
-        msg += `${_found_items.toString()}`
+        msg += `${_found_items.toString()} <p>`
+        msg += `${_found_indexes.toString()} <p>`
 
         outputDiv.innerHTML = msg;
 
