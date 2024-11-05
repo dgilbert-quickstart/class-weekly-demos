@@ -19,7 +19,12 @@ document.getElementById("btn-ds-coll-filter-ex1").addEventListener("click", (eve
         outputDiv.innerText = msg
         console.log(msg)
 
-        
+        const _index_item_3 = items_list_1.indexOf(3)
+        const _index_item_10 = items_list_1.indexOf(10)
+
+        msg = `${items_list_1.toString()} <p>`
+        msg += `## item_3_index: ${_index_item_3}, item_10_index : ${_index_item_10}`
+
         outputDiv.innerHTML = msg;
 
 
