@@ -231,6 +231,11 @@ document.getElementById("btn-ds-coll-crud-ex1").addEventListener("click", (event
             msg += `${item} <br>`
         })
 
+        //=====================================
+        //## nested funtion calls
+        //items_list_1.splice(4,1).map(item))
+        //=====================================
+
         outputDiv.innerHTML = msg;
 
 
