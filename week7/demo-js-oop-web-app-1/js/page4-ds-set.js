@@ -171,9 +171,17 @@ document.getElementById("btn-set-filter-ex1").addEventListener("click", (event)=
 
         msg = ""
 
+        if(items_set_1.has(5)){
+            msg = `## item 5 exists in set <p>`
+        }
+        else
+        {
+            msg = `## item 5 does NOT exist in set <p>`
+        }
+
         //es5+ / 2015
-        for(const item of items_set_1) {
-            msg += `${item} <br>`
+        for(const [key, value] of items_set_1.entries()) {
+            msg += `${key} - ${value} <br>`
         }
 
         outputDiv.innerHTML = msg;
