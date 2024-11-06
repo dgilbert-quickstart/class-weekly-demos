@@ -26,7 +26,7 @@ document.getElementById("btn-map-index-ex1").addEventListener("click", (event)=>
         
         msg = `---map.size: ${items_map_1.size}<p>`
         
-        msg += `--- map-key1 ${items_map_1.get("key1")}-<p>`
+        msg += `--- map.get(key1) ${items_map_1.get("key1")}-<p>`
         
         msg += "---for of --<p>"
         
@@ -48,42 +48,55 @@ document.getElementById("btn-map-index-ex1").addEventListener("click", (event)=>
     }
 });
 
-/*
-document.getElementById("btn-set-loop-ex1").addEventListener("click", (event)=>{
+
+document.getElementById("btn-map-loop-ex1").addEventListener("click", (event)=>{
 
     let msg = "";
-    
-    //- integer array - data in-memory 
-    const items_list_1 = [1,2,3,4,3,5,6,7,5];
+      
+    //- MAP - ES6+ /2015+
+    //map - key / value pairs ie: dictionary, or hashMap,
+    // does not allow duplicate keys
 
-    //- SET - ES5+ /2015+
-    //set - does not allow duplicate items
-    //    - integer set items are sorted by default 
-
-    //new - create set object in memory 
-    //- set object has pre-defined functions 
-
-    const items_set_1 = new Set(items_list_1);
+    const items_map_1 = new Map([
+        ["key1",1],
+        ["key2",2]
+    ]);
 
     try {
         
-        msg =  "# btn-set-loop-ex1"
+        msg =  "# btn-map-loop-ex1"
         outputDiv.innerText = msg
         console.log(msg)
 
-        msg = `${items_list_1.toString()} <p>`
-        
         msg += "---for of --<p>"
         
-        //es5+ / 2015
-        for(const item of items_set_1) {
+        for(const item of items_map_1) {
             msg += `${item} <br>`
         }
 
-        msg += "---foreach--<p>"
+        msg += "<p>---for of keys--<p>"
+        
+        for(const item of items_map_1.keys()) {
+            msg += `${item} <br>`
+        }
 
-        items_set_1.forEach((item,index) => {
-            msg += `${index} = ${item} <br>`
+        msg += "<p>---for of values--<p>"
+        
+        for(const item of items_map_1.values()) {
+            msg += `${item} <br>`
+        }
+
+        
+        msg += "<p>---for of entities--<p>"
+        
+        for(const [key,value] of items_map_1.entries()) {
+            msg += `${key} -> ${value} <br>`
+        }
+
+        msg += "<p>---foreach--<p>"
+
+        items_map_1.forEach((value,key) => {
+            msg += `${key} = ${value} <br>`
         })
 
         outputDiv.innerHTML = msg;
@@ -91,7 +104,7 @@ document.getElementById("btn-set-loop-ex1").addEventListener("click", (event)=>{
 
     } catch (error) {
 
-        msg =  "# btn-set-loop-ex1: error"
+        msg =  "# btn-map-loop-ex1: error"
         outputDiv.innerText = msg
 
         console.log(msg)
@@ -99,7 +112,7 @@ document.getElementById("btn-set-loop-ex1").addEventListener("click", (event)=>{
     }
 });
 
-
+/*
 document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
 
     let msg = "";
