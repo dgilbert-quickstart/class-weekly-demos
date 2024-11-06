@@ -27,6 +27,10 @@ document.getElementById("btn-set-index-ex1").addEventListener("click", (event)=>
         msg = `${items_list_1.toString()} <p>`
         
         msg += `---set.size: ${items_set_1.size}--<p>`
+        
+        //can not access set at index ie: list/arrays
+        msg += `--- index-0 ${items_set_1[0]}- unable to access set index-<p>`
+        //use for loop and access index item 
 
         msg += "---for of --<p>"
         
@@ -34,9 +38,7 @@ document.getElementById("btn-set-index-ex1").addEventListener("click", (event)=>
         for(const item of items_set_1) {
             msg += `${item} <br>`
         }
-
         
-
         outputDiv.innerHTML = msg;
 
 
@@ -49,6 +51,7 @@ document.getElementById("btn-set-index-ex1").addEventListener("click", (event)=>
         console.log(error)
     }
 });
+
 
 document.getElementById("btn-set-loop-ex1").addEventListener("click", (event)=>{
 
