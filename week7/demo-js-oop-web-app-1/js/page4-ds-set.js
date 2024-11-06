@@ -118,8 +118,24 @@ document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
         console.log(msg)
 
         msg = ""
+
+        //-- add 
         //-- function chaining ---
         items_set_1.add(8).add(9).add(3)
+
+        //-- delete 
+        items_set_1.delete(3)
+
+        //-- delete 
+        items_set_1.delete(9)
+        
+        //-- delete 
+        items_set_1.delete(10)
+
+        //### no update at index 
+
+        //## delete all 
+        //items_set_1.clear()
 
         //es5+ / 2015
         for(const item of items_set_1) {
