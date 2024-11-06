@@ -112,42 +112,44 @@ document.getElementById("btn-map-loop-ex1").addEventListener("click", (event)=>{
     }
 });
 
-/*
-document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
+
+document.getElementById("btn-map-crud-ex1").addEventListener("click", (event)=>{
 
     let msg = "";
-    
-    const items_list_1 = [1,2,3,4,3,5,6,7,5];
-    const items_set_1 = new Set(items_list_1);
+  
+    //- MAP - ES6+ /2015+
+    //map - key / value pairs ie: dictionary, or hashMap,
+    // does not allow duplicate keys
+
+    const items_map_1 = new Map([
+        ["key1",1],
+        ["key2",2]
+    ]);
 
     try {
         
-        msg =  "# btn-set-crud-ex1"
+        msg =  "# btn-map-crud-ex1"
         outputDiv.innerText = msg
         console.log(msg)
 
         msg = ""
 
-        //-- add 
-        //-- function chaining ---
-        items_set_1.add(8).add(9).add(3)
+        //-- add or update 
+        //-- i key does not exist key/value will be created 
+        items_map_1.set("key3",3).set("key4",4).set("key5",5)
+    
+        //update value usign key 
+        items_map_1.set("key5",5.1) 
 
         //-- delete 
-        items_set_1.delete(3)
+        items_map_1.delete("key3")
 
-        //-- delete 
-        items_set_1.delete(9)
-        
-        //-- delete 
-        items_set_1.delete(10)
-
-        //### no update at index 
+        items_map_1.delete("key10")
 
         //## delete all 
-        //items_set_1.clear()
+        //items_map_1.clear()
 
-        //es5+ / 2015
-        for(const item of items_set_1) {
+        for(const item of items_map_1) {
             msg += `${item} <br>`
         }
 
@@ -156,7 +158,7 @@ document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
 
     } catch (error) {
 
-        msg =  "# btn-set-crud-ex1: error"
+        msg =  "# btn-map-crud-ex1: error"
         outputDiv.innerText = msg
 
         console.log(msg)
@@ -164,7 +166,7 @@ document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
     }
 });
 
-
+/*
 document.getElementById("btn-set-filter-ex1").addEventListener("click", (event)=>{
 
     let msg = "";
