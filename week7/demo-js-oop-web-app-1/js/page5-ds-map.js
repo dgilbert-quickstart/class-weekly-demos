@@ -191,6 +191,8 @@ document.getElementById("btn-map-filter-ex1").addEventListener("click", (event)=
             msg = `## key2 does NOT exist in map <p>`
         }
 
+        msg += `--- map.get(key1) ${items_map_1.get("key1")}-<p>`
+        
         msg += `<P>----keys or values ---</p>`
         
         //es6+ / 2015
