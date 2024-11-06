@@ -104,3 +104,28 @@ document.getElementById("btn-set-loop-ex1").addEventListener("click", (event)=>{
 });
 
 
+document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
+
+    let msg = "";
+    
+    const items_list_1 = [1,2,3,4,3,5,6,7,5];
+    const items_set_1 = new Set(items_list_1);
+
+    try {
+        
+        msg =  "# btn-set-crud-ex1"
+        outputDiv.innerText = msg
+        console.log(msg)
+
+        outputDiv.innerHTML = msg;
+
+
+    } catch (error) {
+
+        msg =  "# btn-set-crud-ex1: error"
+        outputDiv.innerText = msg
+
+        console.log(msg)
+        console.log(error)
+    }
+});
