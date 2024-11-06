@@ -117,6 +117,15 @@ document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
         outputDiv.innerText = msg
         console.log(msg)
 
+        msg = ""
+        //-- function chaining ---
+        items_set_1.add(8).add(9).add(3)
+
+        //es5+ / 2015
+        for(const item of items_set_1) {
+            msg += `${item} <br>`
+        }
+
         outputDiv.innerHTML = msg;
 
 
@@ -129,3 +138,7 @@ document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
         console.log(error)
     }
 });
+
+
+
+
