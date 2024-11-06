@@ -184,6 +184,14 @@ document.getElementById("btn-set-filter-ex1").addEventListener("click", (event)=
             msg += `${key} - ${value} <br>`
         }
 
+        msg += `<P>----keys or values ---</p>`
+        
+        //es5+ / 2015
+        //for(const item of items_set_1.keys()) {
+        for(const item of items_set_1.values()) {
+            msg += `${item} <br>`
+        }
+
         outputDiv.innerHTML = msg;
 
 
