@@ -166,49 +166,44 @@ document.getElementById("btn-map-crud-ex1").addEventListener("click", (event)=>{
     }
 });
 
-/*
-document.getElementById("btn-set-filter-ex1").addEventListener("click", (event)=>{
+document.getElementById("btn-map-filter-ex1").addEventListener("click", (event)=>{
 
     let msg = "";
     
-    const items_list_1 = [1,2,3,4,3,5,6,7,5];
-    const items_set_1 = new Set(items_list_1);
+    const items_map_1 = new Map([
+        ["key1",1],
+        ["key2",2]
+    ]);
 
     try {
         
-        msg =  "# btn-set-filter-ex1"
+        msg =  "# btn-map-filter-ex1"
         outputDiv.innerText = msg
         console.log(msg)
 
         msg = ""
 
-        if(items_set_1.has(5)){
-            msg = `## item 5 exists in set <p>`
+        if(items_map_1.has("key2")){
+            msg = `## key2 exists in map <p>`
         }
         else
         {
-            msg = `## item 5 does NOT exist in set <p>`
-        }
-
-        //es5+ / 2015
-        for(const [key, value] of items_set_1.entries()) {
-            msg += `${key} - ${value} <br>`
+            msg = `## key2 does NOT exist in map <p>`
         }
 
         msg += `<P>----keys or values ---</p>`
         
-        //es5+ / 2015
-        //for(const item of items_set_1.keys()) {
-        for(const item of items_set_1.values()) {
-            msg += `${item} <br>`
-        }
-
+        //es6+ / 2015
+        for(const [key, value] of items_map_1.entries()) {
+            msg += `${key} - ${value} <br>`
+        }    
+        
         outputDiv.innerHTML = msg;
 
 
     } catch (error) {
 
-        msg =  "# btn-set-filter-ex1: error"
+        msg =  "# btn-map-filter-ex1: error"
         outputDiv.innerText = msg
 
         console.log(msg)
@@ -216,5 +211,4 @@ document.getElementById("btn-set-filter-ex1").addEventListener("click", (event)=
     }
 });
 
-*/
 
