@@ -156,5 +156,38 @@ document.getElementById("btn-set-crud-ex1").addEventListener("click", (event)=>{
 });
 
 
+document.getElementById("btn-set-filter-ex1").addEventListener("click", (event)=>{
+
+    let msg = "";
+    
+    const items_list_1 = [1,2,3,4,3,5,6,7,5];
+    const items_set_1 = new Set(items_list_1);
+
+    try {
+        
+        msg =  "# btn-set-filter-ex1"
+        outputDiv.innerText = msg
+        console.log(msg)
+
+        msg = ""
+
+        //es5+ / 2015
+        for(const item of items_set_1) {
+            msg += `${item} <br>`
+        }
+
+        outputDiv.innerHTML = msg;
+
+
+    } catch (error) {
+
+        msg =  "# btn-set-filter-ex1: error"
+        outputDiv.innerText = msg
+
+        console.log(msg)
+        console.log(error)
+    }
+});
+
 
 
