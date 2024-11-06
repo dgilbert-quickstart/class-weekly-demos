@@ -6,36 +6,32 @@ document.getElementById("btn-map-index-ex1").addEventListener("click", (event)=>
 
     let msg = "";
     
-    //- integer array - data in-memory 
-    const items_list_1 = [1,2,3,4,3,5,6,7,5];
-
-    //- SET - ES5+ /2015+
-    //set - does not allow duplicate items
-    //    - integer set items are sorted by default 
+    //- MAP - ES6+ /2015+
+    //map - key / value pairs ie: dictionary, or hashMap,
+    // does not allow duplicate keys
 
     //new - create set object in memory 
-    //- set object has pre-defined functions 
+    //- map object has pre-defined functions 
 
-    const items_set_1 = new Set(items_list_1);
+    const items_map_1 = new Map([
+        ["key1",1],
+        ["key2",2]
+    ]);
 
     try {
         
         msg =  "# btn-set-index-ex1"
         outputDiv.innerText = msg
         console.log(msg)
-
-        msg = `${items_list_1.toString()} <p>`
         
-        msg += `---set.size: ${items_set_1.size}--<p>`
+        msg = `---map.size: ${items_map_1.size}<p>`
         
-        //can not access set at index ie: list/arrays
-        msg += `--- index-0 ${items_set_1[0]}- unable to access set index-<p>`
-        //use for loop and access index item 
-
+        msg += `--- map-key1 ${items_map_1.get("key1")}-<p>`
+        
         msg += "---for of --<p>"
         
         //es5+ / 2015
-        for(const item of items_set_1) {
+        for(const item of items_map_1) {
             msg += `${item} <br>`
         }
         
@@ -52,7 +48,7 @@ document.getElementById("btn-map-index-ex1").addEventListener("click", (event)=>
     }
 });
 
-
+/*
 document.getElementById("btn-set-loop-ex1").addEventListener("click", (event)=>{
 
     let msg = "";
@@ -205,5 +201,5 @@ document.getElementById("btn-set-filter-ex1").addEventListener("click", (event)=
     }
 });
 
-
+*/
 
