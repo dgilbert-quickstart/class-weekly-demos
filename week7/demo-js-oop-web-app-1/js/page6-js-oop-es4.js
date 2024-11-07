@@ -123,7 +123,7 @@ document.getElementById("btn-es4-oop-ex2").addEventListener("click", (event)=>{
 });
 
 
-document.getElementById("btn-es4-oop-ex3").addEventListener("click", (event)=>{
+document.getElementById("btn-es4-funct-oop-ex3").addEventListener("click", (event)=>{
 
     let msg = "";
     
@@ -166,7 +166,7 @@ document.getElementById("btn-es4-oop-ex3").addEventListener("click", (event)=>{
 
     } catch (error) {
 
-        msg =  "# btn-es4-oop-ex3: error"
+        msg =  "# btn-es4-func-oop-ex3: error"
         outputDiv.innerText = msg
 
         console.log(msg)
