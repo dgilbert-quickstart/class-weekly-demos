@@ -21,7 +21,6 @@ document.getElementById("btn-es5-oop-ex1").addEventListener("click", (event)=>{
         
         outputDiv.innerHTML = msg;
 
-
     } catch (error) {
 
         msg =  "# btn-es5-oop-ex1: error"
