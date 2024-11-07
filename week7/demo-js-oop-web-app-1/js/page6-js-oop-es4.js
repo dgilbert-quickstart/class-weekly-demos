@@ -37,11 +37,12 @@ document.getElementById("btn-es4-oop-ex1").addEventListener("click", (event)=>{
         const person2 = contact
         person2.name = "sam"
         person2.email = "sam@yahoo.com"
+        person2.phone = "120-383-3478" //dynamically add new fields , only availabe in javasctipt
 
-        msg += `es4 oop - person2: ${person2.getInfo()} <p>`
+        msg += `es4 oop - person2: ${person2.getInfo()}, phone: ${person2.phone} <p>`
 
         //data in person 1 memory is shared data is overwritten
-        msg += `es4 oop -shared/data- person1: ${person1.getInfo()} <p>`
+        msg += `es4 oop -shared/data- person1: ${person1.getInfo()} , phone: ${person1.phone}<p>`
 
         outputDiv.innerHTML = msg;
 
