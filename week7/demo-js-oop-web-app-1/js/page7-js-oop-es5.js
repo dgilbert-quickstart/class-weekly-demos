@@ -94,7 +94,9 @@ document.getElementById("btn-es5-oop-inherit-ex1").addEventListener("click", (ev
         class Person extends Contact
         {
             constructor(name,email,phone){
-                supert(name,email)
+                
+                //call inherited class or base calss or super class
+                super(name,email)
                 this.phone = phone;
             }
 
