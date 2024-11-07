@@ -93,22 +93,29 @@ document.getElementById("btn-es5-oop-inherit-ex1").addEventListener("click", (ev
         //class Person inherts all functionality from Contact
         class Person extends Contact
         {
-            //add phone field 
+            constructor(name,email,phone){
+                supert(name,email)
+                this.phone = phone;
+            }
+
+            //can override getInfo()
+            //same mthod in both classes = polimorphism 
+            //can call parent/super method of subclass/child method 
         }
 
         //# re-use calss - create a intsance or creat clas wirth data in memory 
         const contact1 = new Contact("sam","sam@gmail.com");
-        const person1 = new Person("jan","jan@yahoo.com");
+        const person1 = new Person("jan","jan@yahoo.com", "327-123-4371");
         
         //person1.phone = "723-23-4384" //no-reccomended to dynamicall add properties 
 
         const contact2 = new Contact("ann","ann@yahoo.com");
-        const person2 = new Person("tim","tim@msy.com");
+        const person2 = new Person("tim","tim@msy.com", "623-132-6732");
 
-        msg = `contact1: ${contact1.getInfo()} <p>`;
-        msg += `contact2: ${contact2.getInfo()} <p>`;
-        msg += `person1: ${person1.getInfo()} <p>`;
-        msg += `person2: ${person2.getInfo()} <p>`;
+        msg = `contact1: ${contact1.getInfo()}, phone:n/a <p>`;
+        msg += `contact2: ${contact2.getInfo()}, phone: n/a <p>`;
+        msg += `person1: ${person1.getInfo()}, phone: ${person1.phone} <p>`;
+        msg += `person2: ${person2.getInfo()}, phone: ${person2.phone} <p>`;
         
         outputDiv.innerHTML = msg;
 
