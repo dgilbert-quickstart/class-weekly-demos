@@ -2,13 +2,13 @@
 
 const outputDiv = document.getElementById("output");
 
-document.getElementById("btn-lib-ex1").addEventListener("click", (event)=>{
+document.getElementById("btn-es4-lib-ex1").addEventListener("click", (event)=>{
 
     let msg = "";
     
     try {
         
-        msg =  "# btn-lib-ex1"
+        msg =  "# btn-es4-lib-ex1"
         outputDiv.innerText = msg
         console.log(msg)
         
@@ -18,7 +18,7 @@ document.getElementById("btn-lib-ex1").addEventListener("click", (event)=>{
 
     } catch (error) {
 
-        msg =  "# btn-lib-ex1: error"
+        msg =  "# btn-es4-lib-ex1: error"
         outputDiv.innerText = msg
 
         console.log(msg)
