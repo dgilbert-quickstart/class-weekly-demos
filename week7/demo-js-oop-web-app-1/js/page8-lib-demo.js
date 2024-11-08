@@ -12,6 +12,8 @@ document.getElementById("btn-lib-ex1").addEventListener("click", (event)=>{
         outputDiv.innerText = msg
         console.log(msg)
         
+        msg = lib1_es4_func1();
+
         outputDiv.innerHTML = msg;
 
     } catch (error) {
