@@ -5,6 +5,8 @@
 //import uuid from require("uuid")
 
 //client side / front-end 
+//import {v4 as uuidv4} from "../../node_modules/uuid"
+//import {v4 as uuidv4} from "uuid"
 
 const outputDiv = document.getElementById("output");
 
@@ -14,6 +16,7 @@ document.getElementById("btn-uuid-demo-1").addEventListener("click",(e)=>{
 
     try {
        
+        //msg = `## btn-uuid-demo-1: ${uuidv4()}`
         msg = `## btn-uuid-demo-1: `
         outputDiv.innerHTML = msg;
 
