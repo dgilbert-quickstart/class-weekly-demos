@@ -1,6 +1,10 @@
 //type=module, modern javasctipt es5+, import, export 
 
-//import uuid 
+//-- server side uuid example ---
+//import {uuidv4} from uuidv4()
+//import uuid from require("uuid")
+
+//client side / front-end 
 
 const outputDiv = document.getElementById("output");
 
@@ -10,7 +14,7 @@ document.getElementById("btn-uuid-demo-1").addEventListener("click",(e)=>{
 
     try {
        
-        msg = "## btn-uuid-demo-1: "
+        msg = `## btn-uuid-demo-1: `
         outputDiv.innerHTML = msg;
 
     } catch (error) {
