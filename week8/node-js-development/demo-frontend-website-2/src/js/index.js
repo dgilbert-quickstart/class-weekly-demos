@@ -13,7 +13,7 @@ const outputDiv = document.getElementById("output");
 
 document.getElementById("btn-uuid-demo-1").addEventListener("click",(e)=>{
 
-    let msg = "";
+    let msg = ""; 
 
     try {
        
