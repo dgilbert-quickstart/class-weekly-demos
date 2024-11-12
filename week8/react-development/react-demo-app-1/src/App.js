@@ -1,3 +1,9 @@
+/*
+App.js 
+*/
+/*
+
+-- jsx sometimes parses javascript comment 
 
 //react componeent/webpage or html snipit 
 //ie: app.html , page1.html - exctpt -- html-head->body
@@ -7,8 +13,28 @@
 // example: <div>...</div>
 // erorr if 2 root elements ie: <div>...</div><div>...</div>
 // or react root element <></>
+//## not reccomended to use: document.getElementById("").addEventListener("click")
+// - react uses jsx and generates a modified DOM tree 
+
+*/
+
+/*
+functional programming - function with functions, closures 
+*/
 
 function App() {
+
+  /*
+  function within function - es5+ arrow function 
+  */
+  const btnEx1 = () => {
+    
+    const msg = "## btn example 1"
+    alert(msg)
+    console.log(msg)
+
+  }
+
   return (
     <>
       <div>
@@ -18,7 +44,9 @@ function App() {
           <div id="output" className="output">
           </div>
           <div>
-            <button>btn ex1</button>
+            <button onClick={btnEx1}>btn ex1</button>
+            <span> </span>
+            <button>btn ex2</button>
           </div>
       </div>
     </>
