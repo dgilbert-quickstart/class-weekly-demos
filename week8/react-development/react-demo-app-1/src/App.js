@@ -15,6 +15,11 @@ function App() {
           <p>
             React demo app 1.0.0
           </p>
+          <div id="output" className="output">
+          </div>
+          <div>
+            <button>btn ex1</button>
+          </div>
       </div>
     </>
   );
