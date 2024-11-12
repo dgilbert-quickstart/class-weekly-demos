@@ -15,7 +15,7 @@ App.js
 // or react root element <></>
 //## not reccomended to use: document.getElementById("").addEventListener("click")
 // - react uses jsx and generates a modified DOM tree 
-
+//- {} - combine jax/html with javascript code 
 */
 
 /*
@@ -39,14 +39,14 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.1
+            React demo app 1.0.2
           </p>
           <div id="output" className="output">
           </div>
           <div>
             <button onClick={btnEx1}>btn ex1</button>
             <span> </span>
-            <button>btn ex2</button>
+            <button onClick={()=>alert("## btn example 2")}>btn ex2</button>
           </div>
       </div>
     </>
