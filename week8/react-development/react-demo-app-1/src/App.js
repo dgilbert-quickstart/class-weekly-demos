@@ -39,7 +39,7 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.0
+            React demo app 1.0.1
           </p>
           <div id="output" className="output">
           </div>
