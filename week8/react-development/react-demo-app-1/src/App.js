@@ -35,10 +35,11 @@ function App() {
   //  - ie: unless loop / recursive/ out of memory error useEffect calls
 
   //-runs when page/compnent is refreshed/updated 
-  //-- only reccomended in certain conditions 
+  //-- reccomended in certain conditions 
   useEffect(()=>{
 
-    const msg = "## on page/component refesh/update "
+    const msg = "## on page/component refesh/update";
+    console.log(msg)
     
   })
 
