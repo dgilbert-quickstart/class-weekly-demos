@@ -75,9 +75,9 @@ function App() {
 
   }
 
-  const btnEx3 = () => {
+  const btnUseRefEx1 = () => {
     
-    const _msg = "## btn example 3"
+    const _msg = "## btn useRef example 1"
   
     //update output div 
     //outputDiv.innerText = msg 
@@ -99,7 +99,7 @@ function App() {
             <span> </span>
             <button onClick={()=>alert("## btn example 2")}>btn ex2</button>
             {" "}
-            <button onClick={btnEx3}>btn ex3</button>
+            <button onClick={btnUseRefEx1}>useRef ex1</button>
             {" "}
             <button>btn useState ex1</button>
           </div> 
