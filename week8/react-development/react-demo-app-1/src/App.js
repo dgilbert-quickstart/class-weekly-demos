@@ -127,7 +127,7 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.1.0
+            React demo app 1.1.1
           </p>
           <p>{msg}</p>
           <div id="output" className="output" ref={outputDiv}>            
