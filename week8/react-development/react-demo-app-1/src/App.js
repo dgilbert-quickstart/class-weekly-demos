@@ -47,7 +47,7 @@ function App() {
             <button onClick={btnEx1}>btn ex1</button>
             <span> </span>
             <button onClick={()=>alert("## btn example 2")}>btn ex2</button>
-          </div>
+          </div> 
       </div>
     </>
   );
