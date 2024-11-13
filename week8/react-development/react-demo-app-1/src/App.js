@@ -49,7 +49,11 @@ function App() {
 
     const msg = "## on ui page/component refesh/update";
     console.log(msg)
-    
+  
+    //-- useEffect can be call recursivly on ui/update/refresh 
+    //- best practices: avoid recursive useEffect calls 
+    //  - ie: unless loop / recursive/ out of memory error useEffect calls
+
   })
   
   //function within function - es5+ arrow function 
