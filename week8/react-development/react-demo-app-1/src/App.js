@@ -22,6 +22,26 @@ App.js
 
 import {useRef, useEffect, useState} from "react"
 
+//react re-usable component - can be in a seperate file , ie: export, import
+function Header() {
+  //useState, useEffect, useRef, poperties/props/data, event, other 
+  return (
+    <>
+      <h1>React Header Component</h1>
+    </>
+  )
+}
+
+//react re-usable component - can be in a seperate file , ie: export, import
+function Footer() {
+  //useState, useEffect, useRef, poperties/props/data, event, other 
+  return (
+    <>
+      <h1>React Footer Component</h1>
+    </>
+  )
+}
+
 function App() {
 
   //React Hooks - react library functions used to update react/dom or implement dom/events 
