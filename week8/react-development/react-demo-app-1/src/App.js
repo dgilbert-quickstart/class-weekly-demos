@@ -29,7 +29,8 @@ function App() {
   //const outputDiv = document.getElementById("ouput")
   const outputDiv = useRef("")
 
-  //useEffect - page/component (1.) load-1 time, (2.) ui/update/refresh, (3.) unload, (4.) state/variable is update
+  //useEffect - page/component (1.) load-1 time, (2.) ui/update/refresh, (3.) unload, 
+  // (4.) 1 or more state/variable is update
   //- create multiple useEffect in a function 
   //- best practices: avoid recursive useEffect calls 
   //  - ie: unless loop / recursive/ out of memory error useEffect calls
