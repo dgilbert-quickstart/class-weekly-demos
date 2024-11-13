@@ -29,21 +29,11 @@ function App() {
   //const outputDiv = document.getElementById("ouput")
   const outputDiv = useRef("")
 
-  //useEffect - page/component (1.) load-1 time, (2.) unload, (3.) ui/update/refresh, (4.) state/variable is update
+  //useEffect - page/component (1.) load-1 time, (2.) ui/update/refresh, (3.) unload, (4.) state/variable is update
   //- create multiple useEffect in a function 
   //- best practices: avoid recursive useEffect calls 
   //  - ie: unless loop / recursive/ out of memory error useEffect calls
 
-  //- (3.) ui/page/compnent is refreshed/updated 
-  //-- reccomended in certain conditions 
-  useEffect(()=>{
-
-    const msg = "## on ui page/component refesh/update";
-    console.log(msg)
-    
-  })
-
-  
   //- (1.) ui/page/compnent load 
   //-- reccomended in certain conditions 
   useEffect(()=>{
@@ -53,6 +43,15 @@ function App() {
     
   },[])
 
+  //- (2.) ui/page/compnent is refreshed/updated 
+  //-- reccomended in certain conditions 
+  useEffect(()=>{
+
+    const msg = "## on ui page/component refesh/update";
+    console.log(msg)
+    
+  })
+  
   //function within function - es5+ arrow function 
   const btnEx1 = () => {
     
