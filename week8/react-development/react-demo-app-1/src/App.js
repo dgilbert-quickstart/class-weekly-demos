@@ -50,7 +50,10 @@ function App() {
     const _msg = "## on ui page/component load - 1 time";
     console.log(_msg)
     outputDiv.current.innerText = _msg;
-    
+        
+    //-- update useState 
+    setMsg(_msg)
+
   },[])
 
   //- (2.) ui/page/compnent is refreshed/updated 
@@ -72,6 +75,9 @@ function App() {
     const _msg = "## btn example 1"
     alert(_msg)
     console.log(_msg)
+    
+    //-- update useState 
+    setMsg(_msg)
 
   }
 
@@ -82,6 +88,9 @@ function App() {
     //update output div 
     //outputDiv.innerText = msg 
     outputDiv.current.innerText = _msg
+  
+    //-- update useState 
+    setMsg(_msg)
 
   }
 
@@ -98,7 +107,7 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.9
+            React demo app 1.1.0
           </p>
           <p>{msg}</p>
           <div id="output" className="output" ref={outputDiv}>            
