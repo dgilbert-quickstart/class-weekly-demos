@@ -35,11 +35,21 @@ function App() {
 
   }
 
+  const btnEx3 = () => {
+    
+    const msg = "## btn example 3"
+    alert(msg)
+    console.log(msg)
+
+    //update output div 
+
+  }
+
   return (
     <>
       <div>
           <p>
-            React demo app 1.0.2
+            React demo app 1.0.3
           </p>
           <div id="output" className="output">
           </div>
@@ -47,6 +57,8 @@ function App() {
             <button onClick={btnEx1}>btn ex1</button>
             <span> </span>
             <button onClick={()=>alert("## btn example 2")}>btn ex2</button>
+            {" "}
+            <button onClick={btnEx3}>btn ex3</button>
           </div> 
       </div>
     </>
