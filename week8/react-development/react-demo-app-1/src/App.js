@@ -25,6 +25,7 @@ import {useRef} from "react"
 
 function App() {
 
+  //React Hooks - react library functions used to update react/dom or implement dom/events 
   //useRef = references an html/element. can update ref/element in react code 
   //const outputDiv = document.getElementById("ouput")
   const outputDiv = useRef("")
@@ -43,10 +44,10 @@ function App() {
   const btnEx3 = () => {
     
     const msg = "## btn example 3"
-    alert(msg)
-    console.log(msg)
-
+  
     //update output div 
+    //outputDiv.innerText = msg 
+    outputDiv.current.innerText = msg
 
   }
 
@@ -54,10 +55,11 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.4
+            React demo app 1.0.5
           </p>
           <div id="output" className="output" ref={outputDiv}>
           </div>
+          <p></p>
           <div>
             <button onClick={btnEx1}>btn ex1</button>
             <span> </span>
