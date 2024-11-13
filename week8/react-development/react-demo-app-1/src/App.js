@@ -37,7 +37,7 @@ function Footer() {
   //useState, useEffect, useRef, poperties/props/data, event, other 
   return (
     <>
-      <h1>React Footer Component</h1>
+      <i>React Footer Component</i>
     </>
   )
 }
@@ -126,6 +126,7 @@ function App() {
   return (
     <>
       <div>
+          <Header/>
           <p>
             React demo app 1.1.1
           </p>
@@ -142,6 +143,8 @@ function App() {
             {" "}
             <button onClick={btnUseStateEx1}>btn useState ex1</button>
           </div> 
+          <p></p>
+          <Footer/>
       </div>
     </>
   );
