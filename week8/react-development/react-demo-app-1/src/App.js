@@ -29,19 +29,29 @@ function App() {
   //const outputDiv = document.getElementById("ouput")
   const outputDiv = useRef("")
 
-  //useEffect - page/component load, unload, update/refresh 
+  //useEffect - page/component (1.) load-1 time, (2.) unload, (3.) ui/update/refresh, (4.) state/variable is update
   //- create multiple useEffect in a function 
   //- best practices: avoid recursive useEffect calls 
   //  - ie: unless loop / recursive/ out of memory error useEffect calls
 
-  //-runs when page/compnent is refreshed/updated 
+  //- (3.) ui/page/compnent is refreshed/updated 
   //-- reccomended in certain conditions 
   useEffect(()=>{
 
-    const msg = "## on page/component refesh/update";
+    const msg = "## on ui page/component refesh/update";
     console.log(msg)
     
   })
+
+  
+  //- (1.) ui/page/compnent load 
+  //-- reccomended in certain conditions 
+  useEffect(()=>{
+
+    const msg = "## on ui page/component load - 1 time";
+    console.log(msg)
+    
+  },[])
 
   //function within function - es5+ arrow function 
   const btnEx1 = () => {
@@ -66,7 +76,7 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.6
+            React demo app 1.0.7
           </p>
           <div id="output" className="output" ref={outputDiv}>
           </div>
