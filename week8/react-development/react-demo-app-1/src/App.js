@@ -20,7 +20,6 @@ App.js
 
 import {useRef} from "react"
 
-
 //functional programming - function with functions, closures 
 
 function App() {
