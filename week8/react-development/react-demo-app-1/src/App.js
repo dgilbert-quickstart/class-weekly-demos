@@ -20,7 +20,7 @@ App.js
 
 //functional programming - function with functions, closures 
 
-import {useRef, useEffect} from "react"
+import {useRef, useEffect, useState} from "react"
 
 function App() {
 
@@ -28,6 +28,14 @@ function App() {
   //useRef = references an html/element. can update ref/element in react code 
   //const outputDiv = document.getElementById("ouput")
   const outputDiv = useRef("")
+
+  //useState - create in-memory data in react functional page/component 
+  //-- array destructoring - es5+ - useState function return 2 variable 1. data 2. function to update the data 
+  //-- useState data is save and refreshed when the page is updated 
+  //-- react will keep track of when usestate date, when ui refresh react will save and restore useSate data 
+  //-- reccomended: most of the time you can use useState instead of useRef
+  //-- useState is more effieient that useRef is most cases 
+  const [msg, setMsg] = useState("")
 
   //useEffect - page/component (1.) load-1 time, (2.) ui/update/refresh, (3.) unload, 
   // (4.) 1 or more state/variable is update
@@ -39,9 +47,9 @@ function App() {
   //-- reccomended in certain conditions 
   useEffect(()=>{
 
-    const msg = "## on ui page/component load - 1 time";
-    console.log(msg)
-    outputDiv.current.innerText = msg;
+    const _msg = "## on ui page/component load - 1 time";
+    console.log(_msg)
+    outputDiv.current.innerText = _msg;
     
   },[])
 
@@ -49,8 +57,8 @@ function App() {
   //-- reccomended in certain conditions 
   useEffect(()=>{
 
-    const msg = "## on ui page/component refesh/update";
-    console.log(msg)
+    const _msg = "## on ui page/component refesh/update";
+    console.log(_msg)
   
     //-- useEffect can be call recursivly on ui/update/refresh 
     //- best practices: avoid recursive useEffect calls 
@@ -61,19 +69,19 @@ function App() {
   //function within function - es5+ arrow function 
   const btnEx1 = () => {
     
-    const msg = "## btn example 1"
-    alert(msg)
-    console.log(msg)
+    const _msg = "## btn example 1"
+    alert(_msg)
+    console.log(_msg)
 
   }
 
   const btnEx3 = () => {
     
-    const msg = "## btn example 3"
+    const _msg = "## btn example 3"
   
     //update output div 
     //outputDiv.innerText = msg 
-    outputDiv.current.innerText = msg
+    outputDiv.current.innerText = _msg
 
   }
 
@@ -81,7 +89,7 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.7
+            React demo app 1.0.8
           </p>
           <div id="output" className="output" ref={outputDiv}>
           </div>
