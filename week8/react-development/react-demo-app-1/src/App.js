@@ -20,13 +20,14 @@ App.js
 
 import {useRef} from "react"
 
-//useRef = references an html/element. can update ref/element in react code 
-//const outputDiv = document.getElementById("ouput")
-const outputDiv = useRef("")
 
 //functional programming - function with functions, closures 
 
 function App() {
+
+  //useRef = references an html/element. can update ref/element in react code 
+  //const outputDiv = document.getElementById("ouput")
+  const outputDiv = useRef("")
 
   /*
   function within function - es5+ arrow function 
