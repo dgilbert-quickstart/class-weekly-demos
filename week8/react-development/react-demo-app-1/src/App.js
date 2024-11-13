@@ -85,13 +85,23 @@ function App() {
 
   }
 
+  
+  const btnUseStateEx1 = () => {
+    
+    const _msg = "## btn useState example 1"
+    //setMsg(()=>_msg)
+    setMsg(_msg)
+  
+  }
+
   return (
     <>
       <div>
           <p>
-            React demo app 1.0.8
+            React demo app 1.0.9
           </p>
-          <div id="output" className="output" ref={outputDiv}>
+          <p>{msg}</p>
+          <div id="output" className="output" ref={outputDiv}>            
           </div>
           <p></p>
           <div>
@@ -101,7 +111,7 @@ function App() {
             {" "}
             <button onClick={btnUseRefEx1}>useRef ex1</button>
             {" "}
-            <button>btn useState ex1</button>
+            <button onClick={btnUseStateEx1}>btn useState ex1</button>
           </div> 
       </div>
     </>
