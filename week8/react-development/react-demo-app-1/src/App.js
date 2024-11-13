@@ -18,9 +18,13 @@ App.js
 //- {} - combine jax/html with javascript code 
 */
 
-/*
-functional programming - function with functions, closures 
-*/
+import {useRef} from "react"
+
+//useRef = references an html/element. can update ref/element in react code 
+//const outputDiv = document.getElementById("ouput")
+const outputDiv = useRef("")
+
+//functional programming - function with functions, closures 
 
 function App() {
 
@@ -49,9 +53,9 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.3
+            React demo app 1.0.4
           </p>
-          <div id="output" className="output">
+          <div id="output" className="output" ref={outputDiv}>
           </div>
           <div>
             <button onClick={btnEx1}>btn ex1</button>
