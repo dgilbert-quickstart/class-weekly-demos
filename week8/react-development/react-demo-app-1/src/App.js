@@ -41,6 +41,7 @@ function App() {
 
     const msg = "## on ui page/component load - 1 time";
     console.log(msg)
+    outputDiv.current.innerText = msg;
     
   },[])
 
