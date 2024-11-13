@@ -100,6 +100,8 @@ function App() {
             <button onClick={()=>alert("## btn example 2")}>btn ex2</button>
             {" "}
             <button onClick={btnEx3}>btn ex3</button>
+            {" "}
+            <button>btn useState ex1</button>
           </div> 
       </div>
     </>
