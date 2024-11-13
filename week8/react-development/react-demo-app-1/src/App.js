@@ -18,9 +18,9 @@ App.js
 //- {} - combine jax/html with javascript code 
 */
 
-import {useRef} from "react"
-
 //functional programming - function with functions, closures 
+
+import {useRef, useEffect} from "react"
 
 function App() {
 
@@ -29,9 +29,20 @@ function App() {
   //const outputDiv = document.getElementById("ouput")
   const outputDiv = useRef("")
 
-  /*
-  function within function - es5+ arrow function 
-  */
+  //useEffect - page/component load, unload, update/refresh 
+  //- create multiple useEffect in a function 
+  //- best practices: avoid recursive useEffect calls 
+  //  - ie: unless loop / recursive/ out of memory error useEffect calls
+
+  //-runs when page/compnent is refreshed/updated 
+  //-- only reccomended in certain conditions 
+  useEffect(()=>{
+
+    const msg = "## on page/component refesh/update "
+    
+  })
+
+  //function within function - es5+ arrow function 
   const btnEx1 = () => {
     
     const msg = "## btn example 1"
@@ -54,7 +65,7 @@ function App() {
     <>
       <div>
           <p>
-            React demo app 1.0.5
+            React demo app 1.0.6
           </p>
           <div id="output" className="output" ref={outputDiv}>
           </div>
