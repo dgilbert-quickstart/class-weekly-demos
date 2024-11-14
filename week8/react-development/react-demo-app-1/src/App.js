@@ -23,11 +23,12 @@ App.js
 import {useRef, useEffect, useState} from "react"
 
 //react re-usable component - can be in a seperate file , ie: export, import
-function Header() {
+//property or props including default ie: html/attribute
+function Header({title="demo react app 1.0"}) {
   //useState, useEffect, useRef, poperties/props/data, event, other 
   return (
     <>
-      <h1>React Header Component</h1>
+      <h1>{title}</h1>
     </>
   )
 }
