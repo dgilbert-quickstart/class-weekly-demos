@@ -1,14 +1,14 @@
 import NavBar from "./NavBar";
 
-function About() {
+function ContactUs() {
     return (
       <>
          <NavBar/>
           <p></p>
-          <p>About page/component</p>
+          <p>ContactUs page/component</p>
       </>
     );
 }
   
-export default About;
+export default ContactUs;
 
