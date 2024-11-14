@@ -21,27 +21,8 @@ App.js
 //functional programming - function with functions, closures 
 
 import {useRef, useEffect, useState} from "react"
-
-//react re-usable component - can be in a seperate file , ie: export, import
-//property or props including default ie: html/attribute
-function Header({title="default title"}) {
-  //useState, useEffect, useRef, poperties/props/data, event, other 
-  return (
-    <>
-      <h1>{title}</h1>
-    </>
-  )
-}
-
-//react re-usable component - can be in a seperate file , ie: export, import
-function Footer(props) {
-  //useState, useEffect, useRef, poperties/props/data, event, other 
-  return (
-    <>
-      <i>{props.title}</i>
-    </>
-  )
-}
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 function App() {
 
