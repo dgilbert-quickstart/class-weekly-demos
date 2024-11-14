@@ -130,10 +130,7 @@ function App() {
   return (
     <>
       <div>
-          <Header title="Demo React App 1.0.0"/>
-          <p>
-            React demo app 1.1.2
-          </p>
+          <Header title="Demo React App 1.1.3"/>
           <p>{msg}</p>
           <div id="output" className="output" ref={outputDiv}>            
           </div>
