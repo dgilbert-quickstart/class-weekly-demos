@@ -34,11 +34,11 @@ function Header({title="default title"}) {
 }
 
 //react re-usable component - can be in a seperate file , ie: export, import
-function Footer() {
+function Footer(props) {
   //useState, useEffect, useRef, poperties/props/data, event, other 
   return (
     <>
-      <i>React Footer Component</i>
+      <i>{props.title}</i>
     </>
   )
 }
@@ -145,7 +145,7 @@ function App() {
             <button onClick={btnUseStateEx1}>btn useState ex1</button>
           </div> 
           <p></p>
-          <Footer/>
+          <Footer title="footer @ 2024"/>
       </div>
     </>
   );
