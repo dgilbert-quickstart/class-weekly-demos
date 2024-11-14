@@ -73,7 +73,7 @@ function App() {
         
     //-not-reccomended to update state inside a useEffect - can can recursive-endless loop 
     //- also state variable could be tracked or referenced by other useEffect
-    
+
     //-- update useState 
     setMsg(_msg)
 
@@ -131,7 +131,7 @@ function App() {
       <div>
           <Header/>
           <p>
-            React demo app 1.1.1
+            React demo app 1.1.2
           </p>
           <p>{msg}</p>
           <div id="output" className="output" ref={outputDiv}>            
