@@ -5,6 +5,8 @@ function ContactUs() {
     //ie: const outputDiv = document.getElementById("output")
     const outputDiv = useRef("");
 
+    const txtname = useRef("");
+
     //react includes event object as first parameter 
     //function btnHandleFormValidation(event)
     const btnHandleFormValidation = (event)=>
@@ -13,10 +15,16 @@ function ContactUs() {
 
       try {
         
-        const _msg = "## btnHandleFormValidation"
+        let _msg = "## btnHandleFormValidation"
+
         //alert(_msg)
         outputDiv.current.innerText = _msg
         console.log(_msg)
+
+        if(txtname.current.value == null | txtname.current.value.trim().length == 0) {
+          _msg = "## please enter a valid name"
+          outputDiv.current.innerText = _msg;
+        }
 
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
@@ -32,13 +40,13 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.0.4</p>
+          <p>ContactUs page/component 1.0.6</p>
           <p>
             <div id="output" className="output" ref={outputDiv}></div>
           </p>
           <div>
             <form>
-              <label>* Name: </label><input type="text" maxLength={20}></input><br></br>
+              <label>* Name: </label><input ref={txtname} type="text" maxLength={20}></input><br></br>
               <label>* Email: </label><input type="text"  maxLength={30}></input><br></br>
               <label> Phone: </label><input type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
