@@ -2,16 +2,18 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./components/Home";
 import About from "./components/About"
 import ContactUs from "./components/ContactUs"
+import NavBar from "./components/NavBar";
 
 function App() {
-  return (
-    <BrowserRouter>  
-      <Routes>         
+  return (    
+    <BrowserRouter>            
+      <NavBar/>  
+      <Routes>       
         <Route path="/" element={<Home/>}/>
         <Route path="/contact" element={<ContactUs/>}/>
         <Route path="/about" element={<About/>}/>      
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter>    
   );
 }
 
