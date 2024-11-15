@@ -1,4 +1,9 @@
+import {useRef} from "react";
+
 function ContactUs() {
+
+    //ie: const outputDiv = document.getElementById("output")
+    const outputDiv = useRef("");
 
     //react includes event object as first parameter 
     //function btnHandleFormValidation(event)
@@ -9,12 +14,14 @@ function ContactUs() {
       try {
         
         const _msg = "## btnHandleFormValidation"
-        alert(_msg)
+        //alert(_msg)
+        outputDiv.current.innerText = _msg
         console.log(_msg)
 
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
-        alert(_msg)
+        //alert(_msg)
+        outputDiv.current.innerText = _msg
         console.log(_msg)
         console.log(error)
       
@@ -25,9 +32,9 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.0.3</p>
+          <p>ContactUs page/component 1.0.4</p>
           <p>
-            <div id="output" className="output"></div>
+            <div id="output" className="output" ref={outputDiv}></div>
           </p>
           <div>
             <form>
