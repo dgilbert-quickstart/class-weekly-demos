@@ -25,11 +25,13 @@ function ContactUs() {
         if(txtname.current.value == null | txtname.current.value.trim().length == 0) {
           _msg = "## please enter a valid name"
           outputDiv.current.innerText = _msg;
+          return false; //stop button click 
         }
 
         if(txtemail.current.value == null | txtemail.current.value.trim().length == 0) {
           _msg = "## please enter a valid email"
           outputDiv.current.innerText = _msg;
+          return false; //stop button click 
         }
 
       } catch (error) {        
