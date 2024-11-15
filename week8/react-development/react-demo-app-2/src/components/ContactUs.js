@@ -56,7 +56,7 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.0.7</p>
+          <p>ContactUs page/component 1.0.8</p>
           <p>
             <div id="output" className="output" ref={outputDiv}></div>
           </p>
