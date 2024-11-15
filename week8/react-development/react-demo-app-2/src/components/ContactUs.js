@@ -80,6 +80,18 @@ function ContactUs() {
           outputDiv.current.innerText = _msg;
           console.log(_msg)
 
+          outputDiv.current.innerText = "";
+
+          //clear fields
+          txtname.current.value = "";
+          txtemail.current.value = "";
+          txtphone.current.value = "";
+          txtcomment.current.value = "";
+
+          //field focus 
+          txtname.current.focus()
+
+
         } catch (error) {
 
           const _msg = "## btnHandleFormSeset::error"
@@ -92,7 +104,7 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.1.0</p>
+          <p>ContactUs page/component 1.1.1</p>
           <p>
             <div id="output" className="output" ref={outputDiv}></div>
           </p>
