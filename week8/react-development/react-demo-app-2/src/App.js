@@ -5,11 +5,11 @@ import ContactUs from "./components/ContactUs"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>                        
+    <BrowserRouter>  
+      <Routes>         
         <Route path="/" element={<Home/>}/>
         <Route path="/contact" element={<ContactUs/>}/>
-        <Route path="/about" element={<About/>}/>
+        <Route path="/about" element={<About/>}/>      
       </Routes>
     </BrowserRouter>
   );
