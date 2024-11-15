@@ -6,6 +6,7 @@ function ContactUs() {
     const outputDiv = useRef("");
 
     const txtname = useRef("");
+    const txtemail = useRef("");
 
     //react includes event object as first parameter 
     //function btnHandleFormValidation(event)
@@ -26,6 +27,11 @@ function ContactUs() {
           outputDiv.current.innerText = _msg;
         }
 
+        if(txtemail.current.value == null | txtemail.current.value.trim().length == 0) {
+          _msg = "## please enter a valid email"
+          outputDiv.current.innerText = _msg;
+        }
+
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
         //alert(_msg)
@@ -40,14 +46,14 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.0.6</p>
+          <p>ContactUs page/component 1.0.7</p>
           <p>
             <div id="output" className="output" ref={outputDiv}></div>
           </p>
           <div>
             <form>
               <label>* Name: </label><input ref={txtname} type="text" maxLength={20}></input><br></br>
-              <label>* Email: </label><input type="text"  maxLength={30}></input><br></br>
+              <label>* Email: </label><input ref={txtemail} type="text"  maxLength={30}></input><br></br>
               <label> Phone: </label><input type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
               <textarea rows={5} cols={30}></textarea><p></p>
