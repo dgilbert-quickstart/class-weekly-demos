@@ -42,6 +42,23 @@ function ContactUs() {
           return false; //stop button click 
         }
 
+        //submit message 
+        outputDiv.current.innerText = "form submitted"
+
+        _msg = `## form submit: ${txtname.current.value} - ${txtemail.current.value} 
+        - ${txtphone.current.value} - ${txtcomment.current.value}`
+        
+        console.log(_msg)
+
+        //clear fields
+        txtname.current.value = "";
+        txtemail.current.value = "";
+        txtphone.current.value = "";
+        txtcomment.current.value = "";
+
+        //field focus 
+        txtname.current.focus()
+
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
         //alert(_msg)
@@ -56,7 +73,7 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.0.8</p>
+          <p>ContactUs page/component 1.0.9</p>
           <p>
             <div id="output" className="output" ref={outputDiv}></div>
           </p>
