@@ -70,6 +70,25 @@ function ContactUs() {
 
     }
 
+    const btnHandleFormReset = (event)=>
+    {
+        event.preventDefault();
+
+        try {
+          
+          const _msg = "## btnHandleFormSeset"
+          outputDiv.current.innerText = _msg;
+          console.log(_msg)
+
+        } catch (error) {
+
+          const _msg = "## btnHandleFormSeset::error"
+          outputDiv.current.innerText = _msg;
+          console.log(_msg)
+          console.log(error)
+        }
+    }
+
     return (
       <>
           <p></p>
@@ -86,7 +105,7 @@ function ContactUs() {
               <textarea ref={txtcomment} rows={5} cols={30}></textarea><p></p>
               <button onClick={btnHandleFormValidation}>Submit</button>
               {"   "}
-              <button>reset</button>
+              <button onClick={btnHandleFormReset}>reset</button>
             </form>
           </div>
       </>
