@@ -73,7 +73,7 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.0.9</p>
+          <p>ContactUs page/component 1.1.0</p>
           <p>
             <div id="output" className="output" ref={outputDiv}></div>
           </p>
@@ -85,6 +85,8 @@ function ContactUs() {
               <label>* Comment: </label><br></br>
               <textarea ref={txtcomment} rows={5} cols={30}></textarea><p></p>
               <button onClick={btnHandleFormValidation}>Submit</button>
+              {"   "}
+              <button>reset</button>
             </form>
           </div>
       </>
