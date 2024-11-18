@@ -6,6 +6,7 @@ function ContactUs2() {
   const [txtname, setName] = useState("")
   const [txtemail, setEmail] = useState("")
   const [txtphone, setPhone] = useState("")
+  const [txcomment, setComment] = useState("")
 
   const btnHandleFormValidation = (event)=>
   {
@@ -27,6 +28,12 @@ function ContactUs2() {
             
         if(txtemail == null | txtemail.trim().length == 0) {
           _msg = "## please enter a valid email"
+          setMsg(_msg)  
+          return false; //stop button click 
+        }
+
+        if(txcomment == null | txcomment.trim().length == 0) {
+          _msg = "## please enter a valid comment"
           setMsg(_msg)  
           return false; //stop button click 
         }
@@ -100,7 +107,7 @@ function ContactUs2() {
               <label>* Email: </label><input name="txtemail" onChange={handleEmailChange} type="text"  maxLength={30}></input><br></br>
               <label> Phone: </label><input name="txtphone" onChange={(event)=>setPhone(event.target.value)} type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
-              <textarea  rows={5} cols={30}></textarea><p></p>
+              <textarea name="txtcomment" onChange={(e)=>setComment(e.target.value)} rows={5} cols={30}></textarea><p></p>
               <button onClick={btnHandleFormValidation}>Submit</button>
               {"   "}
               <button>reset</button>
