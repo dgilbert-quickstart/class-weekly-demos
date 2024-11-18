@@ -38,6 +38,12 @@ function ContactUs2() {
           return false; //stop button click 
         }
 
+        _msg = "# Form submit"        
+        setMsg(_msg)
+
+        _msg = `#form submit: ${txtname} - ${txtemail} - ${txtphone} - ${txcomment}`
+        console.log(_msg)
+
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
         console.log(_msg)
