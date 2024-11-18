@@ -23,7 +23,13 @@ function ContactUs2() {
           setMsg(_msg)  
           return false; //stop button click 
         }
-    
+            
+        if(txtemail == null | txtemail.trim().length == 0) {
+          _msg = "## please enter a valid email"
+          setMsg(_msg)  
+          return false; //stop button click 
+        }
+
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
         console.log(_msg)
