@@ -3,6 +3,7 @@ import {useState} from "react"
 function ContactUs2() {
 
   const [msg, setMsg] = useState("")
+  const [txtname, setName] = useState("")
 
   const btnHandleFormValidation = (event)=>
     {
@@ -26,6 +27,28 @@ function ContactUs2() {
 
     }
 
+    const handleNameChange = (event)=>
+      {
+        event.preventDefault();
+  
+        try {
+          
+          let _msg = "## handleNameChange"
+          console.log(_msg)
+  
+          //## update state 
+          setMsg(_msg)
+  
+      
+        } catch (error) {        
+          const _msg = "## handleNameChange::Error"
+          console.log(_msg)
+          console.log(error)
+        
+        }
+  
+      }
+  
     return (
       <>
           <p></p>
