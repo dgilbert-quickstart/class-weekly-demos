@@ -114,7 +114,15 @@ function ContactUs2() {
               
               let _msg = "## btnHandlReset"
               console.log(_msg)
+              
+              _msg = ""
+
               setMsg(_msg)      
+              
+              setName(_msg)
+              setEmail(_msg)
+              setPhone(_msg)
+              setComment(_msg)
           
             } catch (error) {        
               const _msg = "## btnHandlReset::Error"
@@ -123,7 +131,7 @@ function ContactUs2() {
             
             }
       
-          }
+        }
   
     return (
       <>
