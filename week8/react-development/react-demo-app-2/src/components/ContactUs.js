@@ -104,10 +104,10 @@ function ContactUs() {
     return (
       <>
           <p></p>
-          <p>ContactUs page/component 1.1.1</p>
-          <p>
-            <div id="output" className="output" ref={outputDiv}></div>
-          </p>
+          <p>ContactUs page/component 1.1.2</p>
+          <p></p>
+          <div id="output" className="output" ref={outputDiv}></div>
+          <p></p>
           <div>
             <form>
               <label>* Name: </label><input ref={txtname} type="text" maxLength={20}></input><br></br>
