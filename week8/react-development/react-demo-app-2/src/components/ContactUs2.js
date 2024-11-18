@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 function ContactUs2() {
 
@@ -7,6 +7,13 @@ function ContactUs2() {
   const [txtemail, setEmail] = useState("")
   const [txtphone, setPhone] = useState("")
   const [txtcomment, setComment] = useState("")
+
+  useEffect(()=>{
+
+  //3. page-unload 
+
+  },[]) //.1 on-Page-load, one time [] or 2. on state/variable update , 4. on page/refresh
+
 
   const btnHandleFormValidation = (event)=>
   {
@@ -136,7 +143,7 @@ function ContactUs2() {
     return (
       <>
           <p></p>
-          <p>Contact Us 2 page/component - 1.0.4</p>
+          <p>Contact Us 2 page/component - 1.0.5</p>
           <p>{msg}</p>
           <div className="output"></div>
           <p></p>
