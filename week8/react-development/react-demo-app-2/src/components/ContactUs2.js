@@ -2,7 +2,7 @@ import {useState} from "react"
 
 function ContactUs2() {
 
-  cosnt [msg, setMsg] = useState("")
+  const [msg, setMsg] = useState("")
 
   const btnHandleFormValidation = (event)=>
     {
