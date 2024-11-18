@@ -39,6 +39,7 @@ function ContactUs2() {
           //# get current value from text field, update state
           setName(event.target.value)
           
+          console.log("## event.target.value: ", event.target.value)
           console.log("## txtname: ", txtname)
       
         } catch (error) {        
