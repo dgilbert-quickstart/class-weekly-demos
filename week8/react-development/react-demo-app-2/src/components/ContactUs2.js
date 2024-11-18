@@ -1,8 +1,29 @@
 function ContactUs2() {
+
+  const btnHandleFormValidation = (event)=>
+    {
+      event.preventDefault();
+
+      try {
+        
+        let _msg = "## btnHandleFormValidation"
+        console.log(_msg)
+
+    
+      } catch (error) {        
+        const _msg = "## btnHandleFormValidation::Error"
+        outputDiv.current.innerText = _msg
+        console.log(_msg)
+        console.log(error)
+      
+      }
+
+    }
+
     return (
       <>
           <p></p>
-          <p>Contact Us 2 page/component</p>
+          <p>Contact Us 2 page/component - 1.0.1</p>
           <p></p>
           <div className="output"></div>
           <p></p>
@@ -13,7 +34,7 @@ function ContactUs2() {
               <label> Phone: </label><input type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
               <textarea  rows={5} cols={30}></textarea><p></p>
-              <button>Submit</button>
+              <button onClick={btnHandleFormValidation}>Submit</button>
               {"   "}
               <button>reset</button>
             </form>
