@@ -36,9 +36,10 @@ function ContactUs2() {
           let _msg = "## handleNameChange"
           console.log(_msg)
   
-          //## update state 
-          setMsg(_msg)
-  
+          //# get current value from text field, update state
+          setName(event.target.value)
+          
+          console.log("## txtname: ", txtname)
       
         } catch (error) {        
           const _msg = "## handleNameChange::Error"
@@ -58,7 +59,7 @@ function ContactUs2() {
           <p></p>
           <div>
             <form>
-              <label>* Name: </label><input type="text" maxLength={20}></input><br></br>
+              <label>* Name: </label><input onChange={handleNameChange} type="text" maxLength={20}></input><br></br>
               <label>* Email: </label><input  type="text"  maxLength={30}></input><br></br>
               <label> Phone: </label><input type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
