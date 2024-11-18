@@ -13,6 +13,9 @@ function ContactUs2() {
         let _msg = "## btnHandleFormValidation"
         console.log(_msg)
 
+        //## update state 
+        setMsg(_msg)
+
     
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
@@ -27,7 +30,7 @@ function ContactUs2() {
       <>
           <p></p>
           <p>Contact Us 2 page/component - 1.0.1</p>
-          <p></p>
+          <p>{msg}</p>
           <div className="output"></div>
           <p></p>
           <div>
