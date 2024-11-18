@@ -39,6 +39,7 @@ function ContactUs2() {
           //# get current value from text field, update state
           setName(event.target.value)
           
+          console.log("## event.target.name: ", event.target.name)
           console.log("## event.target.value: ", event.target.value)
           console.log("## txtname: ", txtname)
       
@@ -60,7 +61,7 @@ function ContactUs2() {
           <p></p>
           <div>
             <form>
-              <label>* Name: </label><input onChange={handleNameChange} type="text" maxLength={20}></input><br></br>
+              <label>* Name: </label><input name="txtname" onChange={handleNameChange} type="text" maxLength={20}></input><br></br>
               <label>* Email: </label><input  type="text"  maxLength={30}></input><br></br>
               <label> Phone: </label><input type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
