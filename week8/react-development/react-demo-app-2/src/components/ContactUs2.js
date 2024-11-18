@@ -12,7 +12,6 @@ function ContactUs2() {
     
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
-        outputDiv.current.innerText = _msg
         console.log(_msg)
         console.log(error)
       
