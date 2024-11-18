@@ -6,7 +6,7 @@ function ContactUs2() {
   const [txtname, setName] = useState("")
   const [txtemail, setEmail] = useState("")
   const [txtphone, setPhone] = useState("")
-  const [txcomment, setComment] = useState("")
+  const [txtcomment, setComment] = useState("")
 
   const btnHandleFormValidation = (event)=>
   {
@@ -32,7 +32,7 @@ function ContactUs2() {
           return false; //stop button click 
         }
 
-        if(txcomment == null | txcomment.trim().length == 0) {
+        if(txtcomment == null | txtcomment.trim().length == 0) {
           _msg = "## please enter a valid comment"
           setMsg(_msg)  
           return false; //stop button click 
@@ -41,7 +41,7 @@ function ContactUs2() {
         _msg = "# Form submit"        
         setMsg(_msg)
 
-        _msg = `#form submit: ${txtname} - ${txtemail} - ${txtphone} - ${txcomment}`
+        _msg = `#form submit: ${txtname} - ${txtemail} - ${txtphone} - ${txtcomment}`
         console.log(_msg)
 
         //clear screen 
@@ -49,7 +49,7 @@ function ContactUs2() {
         setEmail("")
         setPhone("")
         setComment("")
-        
+
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
         console.log(_msg)
@@ -109,17 +109,17 @@ function ContactUs2() {
     return (
       <>
           <p></p>
-          <p>Contact Us 2 page/component - 1.0.3</p>
+          <p>Contact Us 2 page/component - 1.0.4</p>
           <p>{msg}</p>
           <div className="output"></div>
           <p></p>
           <div>
             <form>
-              <label>* Name: </label><input name="txtname" onChange={handleNameChange} type="text" maxLength={20}></input><br></br>
-              <label>* Email: </label><input name="txtemail" onChange={handleEmailChange} type="text"  maxLength={30}></input><br></br>
-              <label> Phone: </label><input name="txtphone" onChange={(event)=>setPhone(event.target.value)} type="text"  maxLength={15}></input><br></br>
+              <label>* Name: </label><input value={txtname} name="txtname" onChange={handleNameChange} type="text" maxLength={20}></input><br></br>
+              <label>* Email: </label><input value={txtemail} name="txtemail" onChange={handleEmailChange} type="text"  maxLength={30}></input><br></br>
+              <label> Phone: </label><input value={txtphone} name="txtphone" onChange={(event)=>setPhone(event.target.value)} type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
-              <textarea name="txtcomment" onChange={(e)=>setComment(e.target.value)} rows={5} cols={30}></textarea><p></p>
+              <textarea name="txtcomment" value={txtcomment} onChange={(e)=>setComment(e.target.value)} rows={5} cols={30}></textarea><p></p>
               <button onClick={btnHandleFormValidation}>Submit</button>
               {"   "}
               <button>reset</button>
