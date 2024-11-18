@@ -6,7 +6,7 @@ function ContactUs2() {
   const [txtname, setName] = useState("")
 
   const btnHandleFormValidation = (event)=>
-    {
+  {
       event.preventDefault();
 
       try {
@@ -14,9 +14,14 @@ function ContactUs2() {
         let _msg = "## btnHandleFormValidation"
         console.log(_msg)
 
-        //## update state 
-        setMsg(_msg)
-
+        _msg = ""
+        setMsg(_msg)  
+        
+        if(txtname == null | txtname.trim().length == 0) {
+          _msg = "## please enter a valid name"
+          setMsg(_msg)  
+          return false; //stop button click 
+        }
     
       } catch (error) {        
         const _msg = "## btnHandleFormValidation::Error"
