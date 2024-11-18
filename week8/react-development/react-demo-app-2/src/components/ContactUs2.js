@@ -105,6 +105,25 @@ function ContactUs2() {
           }
     
         }
+
+       const btnHandlReset = (event)=>
+       {
+            event.preventDefault();
+      
+            try {
+              
+              let _msg = "## btnHandlReset"
+              console.log(_msg)
+              setMsg(_msg)      
+          
+            } catch (error) {        
+              const _msg = "## btnHandlReset::Error"
+              console.log(_msg)
+              console.log(error)
+            
+            }
+      
+          }
   
     return (
       <>
@@ -122,7 +141,7 @@ function ContactUs2() {
               <textarea name="txtcomment" value={txtcomment} onChange={(e)=>setComment(e.target.value)} rows={5} cols={30}></textarea><p></p>
               <button onClick={btnHandleFormValidation}>Submit</button>
               {"   "}
-              <button>reset</button>
+              <button onClick={btnHandlReset}>reset</button>
             </form>
           </div>
       </>
