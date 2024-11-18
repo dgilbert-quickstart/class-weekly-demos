@@ -143,7 +143,7 @@ function ContactUs2() {
     return (
       <>
           <p></p>
-          <p>Contact Us 2 page/component - 1.0.5</p>
+          <p>Contact Us 2 page/component - 1.0.6</p>
           <p>{msg}</p>
           <div className="output"></div>
           <p></p>
