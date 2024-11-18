@@ -5,6 +5,7 @@ function ContactUs2() {
   const [msg, setMsg] = useState("")
   const [txtname, setName] = useState("")
   const [txtemail, setEmail] = useState("")
+  const [txtphone, setPhone] = useState("")
 
   const btnHandleFormValidation = (event)=>
   {
@@ -97,7 +98,7 @@ function ContactUs2() {
             <form>
               <label>* Name: </label><input name="txtname" onChange={handleNameChange} type="text" maxLength={20}></input><br></br>
               <label>* Email: </label><input name="txtemail" onChange={handleEmailChange} type="text"  maxLength={30}></input><br></br>
-              <label> Phone: </label><input type="text"  maxLength={15}></input><br></br>
+              <label> Phone: </label><input name="txtphone" onChange={(event)=>setPhone(event.target.value)} type="text"  maxLength={15}></input><br></br>
               <label>* Comment: </label><br></br>
               <textarea  rows={5} cols={30}></textarea><p></p>
               <button onClick={btnHandleFormValidation}>Submit</button>
