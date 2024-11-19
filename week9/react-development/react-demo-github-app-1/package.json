@@ -1,5 +1,6 @@
 {
   "name": "react-demo-github-app-1",
+  "homepage": "https://dgilbert-quickstart.github.io/react-demo-github-app-1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
