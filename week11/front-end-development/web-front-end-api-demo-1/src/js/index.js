@@ -25,6 +25,10 @@ document.getElementById("btn-call-api-demo-1").addEventListener("click", (e)=>{
 
         //### localhost web access error ### //
         //### access origin error - same local host access error ### //
+        //## node js server 
+        //## npm i --save cors
+        //const cors = require("cors"); //import cors
+        //app.use(cors()) //add cors to node middleware to allow same site or localhost access
 
         /*
             Access to fetch at 'http://localhost:8080/about' 

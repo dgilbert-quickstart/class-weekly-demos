@@ -1,8 +1,13 @@
 const express = require("express"); //import express library 
+const cors = require("cors"); //import cors
 const app = express(); //create a new express instance in memory 
 
 //### localhost web access error ### //
 //### access origin error - same local host access error ### //
+//## CORS - cross site origin access - allows same site or localhost access 
+//## npm i --save cors
+//const cors = require("cors"); //import cors
+//app.use(cors()) //add cors to node middleware to allow same site or localhost access
 
 /*
 Access to fetch at 'http://localhost:8080/about' 
@@ -15,6 +20,7 @@ fetch the resource with CORS disabled.
 */
 
 //- node middleware 
+app.use(cors()) //add cors to node middleware to allow same site or localhost access
 
 const SERVER_PORT = 8080; //localhost range - 3000 - 9999
 
