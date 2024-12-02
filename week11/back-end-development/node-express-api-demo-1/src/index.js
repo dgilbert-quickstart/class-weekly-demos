@@ -1,6 +1,19 @@
 const express = require("express"); //import express library 
 const app = express(); //create a new express instance in memory 
 
+//### localhost web access error ### //
+//### access origin error - same local host access error ### //
+
+/*
+Access to fetch at 'http://localhost:8080/about' 
+from origin 'http://127.0.0.1:5500' has been blocked by 
+CORS policy: No 'Access-Control-Allow-Origin' 
+header is present on the requested resource. 
+If an opaque response serves your needs, 
+set the request's mode to 'no-cors' to 
+fetch the resource with CORS disabled.
+*/
+
 //- node middleware 
 
 const SERVER_PORT = 8080; //localhost range - 3000 - 9999
