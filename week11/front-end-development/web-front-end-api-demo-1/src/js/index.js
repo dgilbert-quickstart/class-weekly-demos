@@ -11,7 +11,7 @@ document.getElementById("btn-call-api-demo-1").addEventListener("click", (e)=>{
         //console.log(_msg)
         //outputDiv.innerText = _msg;
 
-        const _url = "http://localhost:8080/about";
+        const _url = "http://localhost:8080/test1";
 
         fetch(_url)
         .then(res=>res.text())
